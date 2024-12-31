@@ -1,0 +1,1825 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: RIDE                                Date: 12-31-2024,  1:44AM
+Device Used: XC95144XL-10-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+121/144 ( 84%) 372 /720  ( 52%) 298/432 ( 69%)   87 /144 ( 60%) 72 /81  ( 89%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          18/18*      38/54       71/90      11/11*
+FB2          18/18*      40/54       56/90      10/10*
+FB3          15/18       40/54       57/90       9/10
+FB4          18/18*      38/54       49/90      10/10*
+FB5          18/18*      39/54       40/90       7/10
+FB6           3/18       23/54       16/90      10/10*
+FB7          13/18       40/54       36/90       7/10
+FB8          18/18*      40/54       47/90       8/10
+             -----       -----       -----      -----    
+            121/144     298/432     372/720     72/81 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'MEMCLK' mapped onto global clock net GCK3.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   34          34    |  I/O              :    64      73
+Output        :   32          32    |  GCK/IO           :     3       3
+Bidirectional :    5           5    |  GTS/IO           :     4       4
+GCK           :    1           1    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     72          72
+
+** Power Data **
+
+There are 121 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'RIDE.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'MEMCLK' based upon the LOC
+   constraint 'P27'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+*************************  Summary of Mapped Logic  ************************
+
+** 37 Outputs **
+
+Signal                                                                                                             Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                                                                                               Pts   Inps          No.  Type    Use     Mode Rate State
+DQMH                                                                                                               4     7     FB1_2   11   I/O     O       STD  SLOW RESET
+IDE_ROMEN                                                                                                          2     3     FB1_3   12   I/O     O       STD  SLOW 
+DQML                                                                                                               4     7     FB1_5   13   I/O     O       STD  SLOW RESET
+MEMW_n                                                                                                             2     2     FB1_6   14   I/O     O       STD  SLOW RESET
+CAS_n                                                                                                              2     2     FB1_8   15   I/O     O       STD  SLOW RESET
+RAS_n                                                                                                              2     2     FB1_9   16   I/O     O       STD  SLOW RESET
+RAMCS_n                                                                                                            4     6     FB1_11  17   I/O     O       STD  SLOW RESET
+BA<0>                                                                                                              2     6     FB1_12  18   I/O     O       STD  SLOW RESET
+BA<1>                                                                                                              2     6     FB1_14  19   I/O     O       STD  SLOW RESET
+MA<10>                                                                                                             6     9     FB1_15  20   I/O     O       STD  SLOW RESET
+MA<0>                                                                                                              4     8     FB1_17  22   GCK/I/O O       STD  SLOW RESET
+DBUS<14>                                                                                                           3     7     FB2_2   99   GSR/I/O I/O     STD  SLOW 
+DBUS<15>                                                                                                           3     7     FB2_5   1    GTS/I/O I/O     STD  SLOW 
+MA<4>                                                                                                              4     8     FB2_6   2    GTS/I/O O       STD  SLOW RESET
+MA<5>                                                                                                              5     9     FB2_8   3    GTS/I/O O       STD  SLOW RESET
+MA<6>                                                                                                              4     8     FB2_9   4    GTS/I/O O       STD  SLOW RESET
+MA<7>                                                                                                              4     8     FB2_11  6    I/O     O       STD  SLOW RESET
+MA<8>                                                                                                              4     8     FB2_12  7    I/O     O       STD  SLOW RESET
+MA<9>                                                                                                              5     9     FB2_14  8    I/O     O       STD  SLOW RESET
+MA<11>                                                                                                             4     8     FB2_15  9    I/O     O       STD  SLOW RESET
+CKE                                                                                                                3     6     FB2_17  10   I/O     O       STD  SLOW RESET
+MA<1>                                                                                                              4     8     FB3_2   23   GCK/I/O O       STD  SLOW RESET
+MA<2>                                                                                                              4     8     FB3_5   24   I/O     O       STD  SLOW RESET
+MA<3>                                                                                                              4     8     FB3_6   25   I/O     O       STD  SLOW RESET
+DBUS<12>                                                                                                           3     7     FB4_15  96   I/O     I/O     STD  SLOW 
+DBUS<13>                                                                                                           3     7     FB4_17  97   I/O     I/O     STD  SLOW 
+RAMOE_n                                                                                                            3     5     FB5_6   37   I/O     O       STD  SLOW 
+ROM_BANK<0>                                                                                                        2     3     FB5_17  49   I/O     O       STD  SLOW 
+ROM_BANK<1>                                                                                                        1     2     FB7_2   50   I/O     O       STD  SLOW 
+DTACK_n                                                                                                            1     4     FB7_5   52   I/O     O       STD  SLOW 
+CFGOUT_n                                                                                                           3     4     FB7_17  61   I/O     O       STD  SLOW SET
+IDECS2_n                                                                                                           1     6     FB8_2   63   I/O     O       STD  SLOW 
+IDECS1_n                                                                                                           1     6     FB8_5   64   I/O     O       STD  SLOW 
+IDEBUF_OE                                                                                                          3     7     FB8_9   67   I/O     O       STD  SLOW 
+IOW_n                                                                                                              4     6     FB8_11  68   I/O     O       STD  SLOW RESET
+IOR_n                                                                                                              3     7     FB8_12  70   I/O     O       STD  SLOW RESET
+OVR_n                                                                                                              1     2     FB8_14  71   I/O     I/O     STD  SLOW 
+
+** 84 Buried Nodes **
+
+Signal                                                                                                             Total Total Loc     Pwr  Reg Init
+Name                                                                                                               Pts   Inps          Mode State
+SDRAM/ram_state_FSM_FFd4                                                                                           11    13    FB1_1   STD  RESET
+BUF_SDRAM/ram_state_FSM_FFd1                                                                                       6     9     FB1_4   STD  
+SDRAM/ram_state_FSM_FFd2                                                                                           6     10    FB1_7   STD  RESET
+SDRAM/ram_state_FSM_FFd3                                                                                           5     11    FB1_10  STD  RESET
+SDRAM/timer_tRFC<0>                                                                                                4     7     FB1_13  STD  RESET
+SDRAM/timer_tRFC<1>                                                                                                3     7     FB1_16  STD  RESET
+SDRAM/init_refreshed                                                                                               2     9     FB1_18  STD  RESET
+$OpTx$FX_DC$202                                                                                                    1     3     FB2_1   STD  
+$OpTx$FX_DC$182                                                                                                    1     2     FB2_3   STD  
+rw_sync<0>                                                                                                         2     2     FB2_4   STD  RESET
+ram_ready                                                                                                          2     5     FB2_7   STD  RESET
+SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2                                                                     2     4     FB2_10  STD  
+ram_dtack                                                                                                          3     7     FB2_13  STD  RESET
+MEMW_n_OBUF47                                                                                                      3     4     FB2_16  STD  
+CAS_n_OBUF49                                                                                                       3     4     FB2_18  STD  
+autoconfig_dout<0>                                                                                                 10    19    FB3_1   STD  RESET
+AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF                                                                 1     3     FB3_7   STD  
+BUF_AUTOCONFIG/zram_size<2>                                                                                        2     2     FB3_8   STD  
+AUTOCONFIG/zram_size<2>                                                                                            2     2     FB3_9   STD  RESET
+AUTOCONFIG/zram_size<0>                                                                                            2     3     FB3_10  STD  RESET
+AUTOCONFIG/ide_base<2>                                                                                             3     17    FB3_11  STD  RESET
+AUTOCONFIG/ide_base<1>                                                                                             3     17    FB3_12  STD  RESET
+AUTOCONFIG/ide_base<0>                                                                                             3     17    FB3_13  STD  RESET
+AUTOCONFIG/addr_match<0>                                                                                           4     23    FB3_14  STD  RESET
+AUTOCONFIG/addr_match<3>                                                                                           5     23    FB3_15  STD  RESET
+AUTOCONFIG/addr_match<2>                                                                                           5     23    FB3_16  STD  RESET
+AUTOCONFIG/addr_match<1>                                                                                           5     24    FB3_17  STD  RESET
+AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF                                                           1     3     FB4_1   STD  
+ideregister_dout<2>                                                                                                2     3     FB4_2   STD  RESET
+ideregister_dout<1>                                                                                                2     3     FB4_3   STD  RESET
+ideregister_dout<0>                                                                                                2     3     FB4_4   STD  RESET
+ide_enabled                                                                                                        2     5     FB4_5   STD  RESET
+enable_maprom                                                                                                      2     4     FB4_6   STD  RESET
+SDRAM/refresh_request<0>                                                                                           2     5     FB4_7   STD  RESET
+otherram_en                                                                                                        3     4     FB4_8   STD  RESET
+SDRAM/refreshing                                                                                                   3     5     FB4_9   STD  RESET
+SDRAM/refresh_timer<3>                                                                                             3     6     FB4_10  STD  RESET
+SDRAM/refresh_timer<0>                                                                                             3     6     FB4_11  STD  RESET
+IDE/rom_bankSel<0>                                                                                                 3     4     FB4_12  STD  RESET
+AUTOCONFIG/maprom_enabled                                                                                          2     4     FB4_13  STD  RESET
+
+Signal                                                                                                             Total Total Loc     Pwr  Reg Init
+Name                                                                                                               Pts   Inps          Mode State
+SDRAM/refresh_timer<2>                                                                                             4     6     FB4_14  STD  RESET
+SDRAM/refresh_timer<1>                                                                                             4     6     FB4_16  STD  RESET
+AUTOCONFIG/ac_state<0>                                                                                             5     6     FB4_18  STD  RESET
+SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF                                                                 1     2     FB5_1   STD  
+uds_n_sync<1>                                                                                                      2     2     FB5_2   STD  RESET
+uds_n_sync<0>                                                                                                      2     2     FB5_3   STD  RESET
+rw_sync<1>                                                                                                         2     2     FB5_4   STD  RESET
+ovr_detect                                                                                                         2     2     FB5_5   STD  RESET
+lds_n_sync<1>                                                                                                      2     2     FB5_7   STD  RESET
+lds_n_sync<0>                                                                                                      2     2     FB5_8   STD  RESET
+ideregister_dout<3>                                                                                                2     3     FB5_9   STD  RESET
+as_n_sync<1>                                                                                                       2     2     FB5_10  STD  RESET
+SDRAM/refresh_request<1>                                                                                           2     2     FB5_11  STD  RESET
+SDRAM/ram_state_FSM_FFd1                                                                                           2     2     FB5_12  STD  RESET
+IDE/ds_delay<2>                                                                                                    2     4     FB5_13  STD  RESET
+IDE/ds_delay<0>                                                                                                    2     4     FB5_14  STD  RESET
+AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D  2     2     FB5_15  STD  
+ide_access/ide_access_D2                                                                                           4     10    FB5_16  STD  
+AUTOCONFIG/cfgin                                                                                                   4     5     FB5_18  STD  RESET
+$OpTx$FX_DC$212                                                                                                    2     6     FB6_16  STD  
+RAS_n_OBUF48                                                                                                       4     5     FB6_17  STD  
+ram_access/ram_access_D2                                                                                           10    16    FB6_18  STD  
+autoconfig_cycle/autoconfig_cycle_D2                                                                               1     10    FB7_8   STD  
+$OpTx$FX_DC$197                                                                                                    1     4     FB7_9   STD  
+ovl                                                                                                                2     8     FB7_10  STD  RESET
+as_n_sync<0>                                                                                                       2     2     FB7_11  STD  RESET
+AUTOCONFIG/cdtv_configured                                                                                         2     19    FB7_12  STD  RESET
+AUTOCONFIG/cdtv                                                                                                    2     11    FB7_13  STD  RESET
+IDE/rom_bankSel<1>                                                                                                 3     4     FB7_14  STD  RESET
+AUTOCONFIG/ac_state<1>                                                                                             3     4     FB7_15  STD  RESET
+autoconfig_dout<1>                                                                                                 7     18    FB7_16  STD  RESET
+autoconfig_dout<3>                                                                                                 8     17    FB7_18  STD  RESET
+IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2                                                                 1     8     FB8_1   STD  
+IDE/dout_and0000/IDE/dout_and0000_D2                                                                               1     9     FB8_3   STD  
+AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2                                                         1     12    FB8_4   STD  
+idereg_dtack                                                                                                       2     8     FB8_6   STD  RESET
+autoconf_dtack                                                                                                     2     5     FB8_7   STD  RESET
+AUTOCONFIG/ram_configured                                                                                          2     16    FB8_8   STD  RESET
+AUTOCONFIG/ide_configured                                                                                          2     16    FB8_10  STD  RESET
+$OpTx$FX_DC$188                                                                                                    2     5     FB8_13  STD  
+
+Signal                                                                                                             Total Total Loc     Pwr  Reg Init
+Name                                                                                                               Pts   Inps          Mode State
+IDE/ds_delay<1>                                                                                                    3     4     FB8_15  STD  RESET
+z2_state_FSM_FFd1                                                                                                  4     6     FB8_16  STD  RESET
+z2_state_FSM_FFd2                                                                                                  5     9     FB8_17  STD  RESET
+autoconfig_dout<2>                                                                                                 9     18    FB8_18  STD  RESET
+
+** 35 Inputs **
+
+Signal                                                                                                             Loc     Pin  Pin     Pin     
+Name                                                                                                                       No.  Type    Use     
+MEMCLK                                                                                                             FB3_8   27   GCK/I/O GCK
+AS_n                                                                                                               FB3_9   28   I/O     I
+UDS_n                                                                                                              FB3_11  29   I/O     I
+LDS_n                                                                                                              FB3_12  30   I/O     I
+RW                                                                                                                 FB3_14  32   I/O     I
+ECLK                                                                                                               FB3_17  34   I/O     I
+ADDR<16>                                                                                                           FB4_2   87   I/O     I
+ADDR<17>                                                                                                           FB4_5   89   I/O     I
+ADDR<18>                                                                                                           FB4_6   90   I/O     I
+ADDR<19>                                                                                                           FB4_8   91   I/O     I
+ADDR<20>                                                                                                           FB4_9   92   I/O     I
+ADDR<21>                                                                                                           FB4_11  93   I/O     I
+ADDR<22>                                                                                                           FB4_12  94   I/O     I
+ADDR<23>                                                                                                           FB4_14  95   I/O     I
+RESET_n                                                                                                            FB5_2   35   I/O     I
+RAM_SIZE<0>                                                                                                        FB5_5   36   I/O     I
+RAM_SIZE<1>                                                                                                        FB5_8   39   I/O     I
+IDE_ENABLE                                                                                                         FB5_9   40   I/O     I
+BERR_n                                                                                                             FB5_12  42   I/O     I
+ADDR<6>                                                                                                            FB6_2   74   I/O     I
+ADDR<7>                                                                                                            FB6_5   76   I/O     I
+ADDR<8>                                                                                                            FB6_6   77   I/O     I
+ADDR<9>                                                                                                            FB6_8   78   I/O     I
+ADDR<10>                                                                                                           FB6_9   79   I/O     I
+ADDR<11>                                                                                                           FB6_11  80   I/O     I
+ADDR<12>                                                                                                           FB6_12  81   I/O     I
+ADDR<13>                                                                                                           FB6_14  82   I/O     I
+ADDR<14>                                                                                                           FB6_15  85   I/O     I
+ADDR<15>                                                                                                           FB6_17  86   I/O     I
+ADDR<1>                                                                                                            FB7_11  56   I/O     I
+ADDR<3>                                                                                                            FB7_12  58   I/O     I
+ADDR<4>                                                                                                            FB7_14  59   I/O     I
+ADDR<2>                                                                                                            FB7_15  60   I/O     I
+CFGIN_n                                                                                                            FB8_8   66   I/O     I
+ADDR<5>                                                                                                            FB8_17  73   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               38/16
+Number of signals used by logic mapping into function block:  38
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+SDRAM/ram_state_FSM_FFd4
+                     11       6<-   0   0     FB1_1         (b)     (b)
+DQMH                  4       2<- /\3   0     FB1_2   11    I/O     O
+IDE_ROMEN             2       0   /\2   1     FB1_3   12    I/O     O
+BUF_SDRAM/ram_state_FSM_FFd1
+                      6       1<-   0   0     FB1_4         (b)     (b)
+DQML                  4       0   /\1   0     FB1_5   13    I/O     O
+MEMW_n                2       0   \/1   2     FB1_6   14    I/O     O
+SDRAM/ram_state_FSM_FFd2
+                      6       1<-   0   0     FB1_7         (b)     (b)
+CAS_n                 2       0     0   3     FB1_8   15    I/O     O
+RAS_n                 2       0     0   3     FB1_9   16    I/O     O
+SDRAM/ram_state_FSM_FFd3
+                      5       0     0   0     FB1_10        (b)     (b)
+RAMCS_n               4       0     0   1     FB1_11  17    I/O     O
+BA<0>                 2       0     0   3     FB1_12  18    I/O     O
+SDRAM/timer_tRFC<0>   4       0     0   1     FB1_13        (b)     (b)
+BA<1>                 2       0   \/1   2     FB1_14  19    I/O     O
+MA<10>                6       1<-   0   0     FB1_15  20    I/O     O
+SDRAM/timer_tRFC<1>   3       0     0   2     FB1_16        (b)     (b)
+MA<0>                 4       0     0   1     FB1_17  22    GCK/I/O O
+SDRAM/init_refreshed
+                      2       0   \/3   0     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$182               14: MA<0>                                           27: SDRAM/timer_tRFC<0> 
+  2: $OpTx$FX_DC$202               15: MA<10>                                          28: SDRAM/timer_tRFC<1> 
+  3: $OpTx$FX_DC$212               16: MEMW_n_OBUF47                                   29: ide_access/ide_access_D2 
+  4: ADDR<10>                      17: RAMCS_n                                         30: ide_enabled 
+  5: ADDR<16>                      18: RAS_n_OBUF48                                    31: lds_n_sync<1> 
+  6: ADDR<1>                       19: RESET_n                                         32: ovl 
+  7: ADDR<20>                      20: SDRAM/init_refreshed                            33: ram_access/ram_access_D2 
+  8: ADDR<22>                      21: SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2  34: ram_ready 
+  9: ADDR<23>                      22: SDRAM/ram_state_FSM_FFd1                        35: rw_sync<1> 
+ 10: BUF_SDRAM/ram_state_FSM_FFd1  23: SDRAM/ram_state_FSM_FFd2                        36: uds_n_sync<1> 
+ 11: CAS_n_OBUF49                  24: SDRAM/ram_state_FSM_FFd3                        37: z2_state_FSM_FFd1 
+ 12: DQMH                          25: SDRAM/ram_state_FSM_FFd4                        38: z2_state_FSM_FFd2 
+ 13: DQML                          26: SDRAM/refresh_request<1>                       
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+SDRAM/ram_state_FSM_FFd4 
+                     ..X......X.....X..X.XXX.XX.......XX.XX.. 13
+DQMH                 XX.........X......X.X...X..........X.... 7
+IDE_ROMEN            ....X.......................XX.......... 3
+BUF_SDRAM/ram_state_FSM_FFd1 
+                     ..........X..........XXXXX......X...XX.. 9
+DQML                 XX..........X.....X.X...X.....X......... 7
+MEMW_n               ...............X..X..................... 2
+SDRAM/ram_state_FSM_FFd2 
+                     ..X......X........X.XXX.XX.......XX..... 10
+CAS_n                ..........X.......X..................... 2
+RAS_n                .................XX..................... 2
+SDRAM/ram_state_FSM_FFd3 
+                     .........XX.......XX.XXXX.XX.....X...... 11
+RAMCS_n              .X........X.....X.X.X..X................ 6
+BA<0>                .......X..........X..XXX.......X........ 6
+SDRAM/timer_tRFC<0>  ..........X.......X..XXX..XX............ 7
+BA<1>                ........X.........X..XXX.......X........ 6
+MA<10>               X.....X.......XX..X.XX.X.......X........ 9
+SDRAM/timer_tRFC<1>  ..........X.......X..XXX..XX............ 7
+MA<0>                X..X.X.......X....X.XXX................. 8
+SDRAM/init_refreshed 
+                     ..................XX.XXXX.XX.....X...... 9
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               40/14
+Number of signals used by logic mapping into function block:  40
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+$OpTx$FX_DC$202       1       0     0   4     FB2_1         (b)     (b)
+DBUS<14>              3       0     0   2     FB2_2   99    GSR/I/O I/O
+$OpTx$FX_DC$182       1       0     0   4     FB2_3         (b)     (b)
+rw_sync<0>            2       0     0   3     FB2_4         (b)     (b)
+DBUS<15>              3       0     0   2     FB2_5   1     GTS/I/O I/O
+MA<4>                 4       0     0   1     FB2_6   2     GTS/I/O O
+ram_ready             2       0     0   3     FB2_7         (b)     (b)
+MA<5>                 5       0     0   0     FB2_8   3     GTS/I/O O
+MA<6>                 4       0     0   1     FB2_9   4     GTS/I/O O
+SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+                      2       0     0   3     FB2_10        (b)     (b)
+MA<7>                 4       0     0   1     FB2_11  6     I/O     O
+MA<8>                 4       0     0   1     FB2_12  7     I/O     O
+ram_dtack             3       0     0   2     FB2_13        (b)     (b)
+MA<9>                 5       0     0   0     FB2_14  8     I/O     O
+MA<11>                4       0     0   1     FB2_15  9     I/O     O
+MEMW_n_OBUF47         3       0     0   2     FB2_16        (b)     (b)
+CKE                   3       0     0   2     FB2_17  10    I/O     O
+CAS_n_OBUF49          3       0     0   2     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$182   15: ADDR<9>                                         28: SDRAM/ram_state_FSM_FFd2 
+  2: $OpTx$FX_DC$188   16: MA<11>                                          29: SDRAM/ram_state_FSM_FFd3 
+  3: ADDR<14>          17: MA<4>                                           30: SDRAM/ram_state_FSM_FFd4 
+  4: ADDR<15>          18: MA<5>                                           31: autoconfig_cycle/autoconfig_cycle_D2 
+  5: ADDR<16>          19: MA<6>                                           32: autoconfig_dout<2> 
+  6: ADDR<17>          20: MA<7>                                           33: autoconfig_dout<3> 
+  7: ADDR<18>          21: MA<8>                                           34: ideregister_dout<2> 
+  8: ADDR<19>          22: MA<9>                                           35: ideregister_dout<3> 
+  9: ADDR<21>          23: RAS_n_OBUF48                                    36: ovl 
+ 10: ADDR<23>          24: RESET_n                                         37: ram_dtack 
+ 11: ADDR<5>           25: RW                                              38: uds_n_sync<1> 
+ 12: ADDR<6>           26: SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2  39: z2_state_FSM_FFd1 
+ 13: ADDR<7>           27: SDRAM/ram_state_FSM_FFd1                        40: z2_state_FSM_FFd2 
+ 14: ADDR<8>          
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+$OpTx$FX_DC$202      ..........................XX.X.................... 3
+DBUS<14>             .X.....................XX.....XX.X...X............ 7
+$OpTx$FX_DC$182      ......................X..X........................ 2
+rw_sync<0>           .......................XX......................... 2
+DBUS<15>             .X.....................XX.....X.X.X..X............ 7
+MA<4>                X.X.......X.....X......X.XXX...................... 8
+ram_ready            .......................X.XXX.X.................... 5
+MA<5>                X..X.......X.....X.....X.XXX.X.................... 9
+MA<6>                X...X.......X.....X....X.XXX...................... 8
+SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 
+                     ..........................XXXX.................... 4
+MA<7>                X....X.......X.....X...X.XXX...................... 8
+MA<8>                X.....X.......X.....X..X.XXX...................... 8
+ram_dtack            ......................XX..XX.X......X.X........... 7
+MA<9>                .......X.X...........X.X.XXX.X.....X.............. 9
+MA<11>               ........X......X.......X.XXXX......X.............. 8
+MEMW_n_OBUF47        ......................X..XXX...................... 4
+CKE                  .......................X..XX.X........XX.......... 6
+CAS_n_OBUF49         .........................XXX.X.................... 4
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               40/14
+Number of signals used by logic mapping into function block:  40
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+autoconfig_dout<0>   10       5<-   0   0     FB3_1         (b)     (b)
+MA<1>                 4       0     0   1     FB3_2   23    GCK/I/O O
+(unused)              0       0     0   5     FB3_3         (b)     
+(unused)              0       0     0   5     FB3_4         (b)     
+MA<2>                 4       0     0   1     FB3_5   24    I/O     O
+MA<3>                 4       0     0   1     FB3_6   25    I/O     O
+AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF
+                      1       0     0   4     FB3_7         (b)     (b)
+BUF_AUTOCONFIG/zram_size<2>
+                      2       0     0   3     FB3_8   27    GCK/I/O GCK
+AUTOCONFIG/zram_size<2>
+                      2       0     0   3     FB3_9   28    I/O     I
+AUTOCONFIG/zram_size<0>
+                      2       0     0   3     FB3_10        (b)     (b)
+AUTOCONFIG/ide_base<2>
+                      3       0     0   2     FB3_11  29    I/O     I
+AUTOCONFIG/ide_base<1>
+                      3       0     0   2     FB3_12  30    I/O     I
+AUTOCONFIG/ide_base<0>
+                      3       0     0   2     FB3_13        (b)     (b)
+AUTOCONFIG/addr_match<0>
+                      4       0     0   1     FB3_14  32    I/O     I
+AUTOCONFIG/addr_match<3>
+                      5       0     0   0     FB3_15  33    I/O     (b)
+AUTOCONFIG/addr_match<2>
+                      5       0     0   0     FB3_16        (b)     (b)
+AUTOCONFIG/addr_match<1>
+                      5       0     0   0     FB3_17  34    I/O     I
+(unused)              0       0   \/5   0     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$182         15: AUTOCONFIG/addr_match<0>     28: DBUS<12>.PIN 
+  2: ADDR<11>                16: AUTOCONFIG/addr_match<1>     29: RAM_SIZE<0> 
+  3: ADDR<12>                17: AUTOCONFIG/addr_match<2>     30: RAM_SIZE<1> 
+  4: ADDR<13>                18: AUTOCONFIG/addr_match<3>     31: RESET_n 
+  5: ADDR<1>                 19: AUTOCONFIG/zram_size<0>      32: SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 
+  6: ADDR<2>                 20: BUF_AUTOCONFIG/zram_size<2>  33: SDRAM/ram_state_FSM_FFd1 
+  7: ADDR<3>                 21: IDE_ENABLE                   34: SDRAM/ram_state_FSM_FFd2 
+  8: ADDR<4>                 22: MA<1>                        35: autoconf_dtack 
+  9: ADDR<5>                 23: MA<2>                        36: autoconfig_cycle/autoconfig_cycle_D2 
+ 10: ADDR<6>                 24: MA<3>                        37: autoconfig_dout<0> 
+ 11: ADDR<7>                 25: DBUS<15>.PIN                 38: rw_sync<1> 
+ 12: ADDR<8>                 26: DBUS<14>.PIN                 39: z2_state_FSM_FFd1 
+ 13: AUTOCONFIG/ac_state<0>  27: DBUS<13>.PIN                 40: z2_state_FSM_FFd2 
+ 14: AUTOCONFIG/ac_state<1> 
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+autoconfig_dout<0>   ....XXXXXXXXXX....X.X.........X...XXXXXX.......... 19
+MA<1>                XX...X...............X........XXXX................ 8
+MA<2>                X.X...X...............X.......XXXX................ 8
+MA<3>                X..X...X...............X......XXXX................ 8
+AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF 
+                     ............................XXX................... 3
+BUF_AUTOCONFIG/zram_size<2> 
+                     ............................XX.................... 2
+AUTOCONFIG/zram_size<2> 
+                     ...................X..........X................... 2
+AUTOCONFIG/zram_size<0> 
+                     ............................XXX................... 3
+AUTOCONFIG/ide_base<2> 
+                     ....XXXXXXXXXX..........X.....X...XX.XXX.......... 17
+AUTOCONFIG/ide_base<1> 
+                     ....XXXXXXXXXX...........X....X...XX.XXX.......... 17
+AUTOCONFIG/ide_base<0> 
+                     ....XXXXXXXXXX............X...X...XX.XXX.......... 17
+AUTOCONFIG/addr_match<0> 
+                     ....XXXXXXXXXXX....X....XXXXX.X...XX.XXX.......... 23
+AUTOCONFIG/addr_match<3> 
+                     ....XXXXXXXXXX...X......XXXXXXX...XX.XXX.......... 23
+AUTOCONFIG/addr_match<2> 
+                     ....XXXXXXXXXX..X.......XXXXXXX...XX.XXX.......... 23
+AUTOCONFIG/addr_match<1> 
+                     ....XXXXXXXXXX.X...X....XXXXXXX...XX.XXX.......... 24
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               38/16
+Number of signals used by logic mapping into function block:  38
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF
+                      1       0     0   4     FB4_1         (b)     (b)
+ideregister_dout<2>   2       0     0   3     FB4_2   87    I/O     I
+ideregister_dout<1>   2       0     0   3     FB4_3         (b)     (b)
+ideregister_dout<0>   2       0     0   3     FB4_4         (b)     (b)
+ide_enabled           2       0     0   3     FB4_5   89    I/O     I
+enable_maprom         2       0     0   3     FB4_6   90    I/O     I
+SDRAM/refresh_request<0>
+                      2       0     0   3     FB4_7         (b)     (b)
+otherram_en           3       0     0   2     FB4_8   91    I/O     I
+SDRAM/refreshing      3       0     0   2     FB4_9   92    I/O     I
+SDRAM/refresh_timer<3>
+                      3       0     0   2     FB4_10        (b)     (b)
+SDRAM/refresh_timer<0>
+                      3       0     0   2     FB4_11  93    I/O     I
+IDE/rom_bankSel<0>    3       0     0   2     FB4_12  94    I/O     I
+AUTOCONFIG/maprom_enabled
+                      2       0     0   3     FB4_13        (b)     (b)
+SDRAM/refresh_timer<2>
+                      4       0     0   1     FB4_14  95    I/O     I
+DBUS<12>              3       0     0   2     FB4_15  96    I/O     I/O
+SDRAM/refresh_timer<1>
+                      4       0     0   1     FB4_16        (b)     (b)
+DBUS<13>              3       0     0   2     FB4_17  97    I/O     I/O
+AUTOCONFIG/ac_state<0>
+                      5       0     0   0     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$188                                             14: DBUS<13>.PIN                                        27: autoconfig_cycle/autoconfig_cycle_D2 
+  2: $OpTx$FX_DC$202                                             15: DBUS<12>.PIN                                        28: autoconfig_dout<0> 
+  3: AUTOCONFIG/ac_state<0>                                      16: RAM_SIZE<0>                                         29: autoconfig_dout<1> 
+  4: AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF          17: RAM_SIZE<1>                                         30: enable_maprom 
+  5: AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2  18: RESET_n                                             31: ide_access/ide_access_D2 
+  6: AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF    19: RW                                                  32: ide_enabled 
+  7: CAS_n_OBUF49                                                20: SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2      33: ideregister_dout<0> 
+  8: ECLK                                                        21: SDRAM/refresh_timer<0>                              34: ideregister_dout<1> 
+  9: IDE/dout_and0000/IDE/dout_and0000_D2                        22: SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF  35: ideregister_dout<2> 
+ 10: IDE/rom_bankSel<0>                                          23: SDRAM/refresh_timer<1>                              36: otherram_en 
+ 11: IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2          24: SDRAM/refresh_timer<2>                              37: ovr_detect 
+ 12: IDE_ENABLE                                                  25: SDRAM/refresh_timer<3>                              38: uds_n_sync<1> 
+ 13: DBUS<14>.PIN                                                26: SDRAM/refreshing                                   
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF 
+                     .................X...........X......X... 3
+ideregister_dout<2>  ........XX........................X..... 3
+ideregister_dout<1>  ........X........................X.X.... 3
+ideregister_dout<0>  ........X....................X..X....... 3
+ide_enabled          ...........X.....XX...........XX........ 5
+enable_maprom        ..........X...X..X...........X.......... 4
+SDRAM/refresh_request<0> 
+                     .................X..X.XXX............... 5
+otherram_en          ..........X..X...X.................X.... 4
+SDRAM/refreshing     .X....X..........X.X.....X.............. 5
+SDRAM/refresh_timer<3> 
+                     .......X............XXXXX............... 6
+SDRAM/refresh_timer<0> 
+                     .......X............XXXXX............... 6
+IDE/rom_bankSel<0>   .........XX.X....X...................... 4
+AUTOCONFIG/maprom_enabled 
+                     .....X...........X...........X......X... 4
+SDRAM/refresh_timer<2> 
+                     .......X............XXXXX............... 6
+DBUS<12>             X................XX.......XX....X....X.. 7
+SDRAM/refresh_timer<1> 
+                     .......X............XXXXX............... 6
+DBUS<13>             X................XX.......X.X....X...X.. 7
+AUTOCONFIG/ac_state<0> 
+                     ..XXX..........XXX...................... 6
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               39/15
+Number of signals used by logic mapping into function block:  39
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF
+                      1       0     0   4     FB5_1         (b)     (b)
+uds_n_sync<1>         2       0     0   3     FB5_2   35    I/O     I
+uds_n_sync<0>         2       0     0   3     FB5_3         (b)     (b)
+rw_sync<1>            2       0     0   3     FB5_4         (b)     (b)
+ovr_detect            2       0     0   3     FB5_5   36    I/O     I
+RAMOE_n               3       0     0   2     FB5_6   37    I/O     O
+lds_n_sync<1>         2       0     0   3     FB5_7         (b)     (b)
+lds_n_sync<0>         2       0     0   3     FB5_8   39    I/O     I
+ideregister_dout<3>   2       0     0   3     FB5_9   40    I/O     I
+as_n_sync<1>          2       0     0   3     FB5_10        (b)     (b)
+SDRAM/refresh_request<1>
+                      2       0     0   3     FB5_11  41    I/O     (b)
+SDRAM/ram_state_FSM_FFd1
+                      2       0     0   3     FB5_12  42    I/O     I
+IDE/ds_delay<2>       2       0     0   3     FB5_13        (b)     (b)
+IDE/ds_delay<0>       2       0     0   3     FB5_14  43    I/O     (b)
+AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D
+                      2       0     0   3     FB5_15  46    I/O     (b)
+ide_access/ide_access_D2
+                      4       0     0   1     FB5_16        (b)     (b)
+ROM_BANK<0>           2       0     0   3     FB5_17  49    I/O     O
+AUTOCONFIG/cfgin      4       0     0   1     FB5_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: ADDR<16>                                                                                                           14: AUTOCONFIG/ide_base<2>                27: RW 
+  2: ADDR<17>                                                                                                           15: AUTOCONFIG/ide_configured             28: SDRAM/refresh_request<0> 
+  3: ADDR<18>                                                                                                           16: BUF_SDRAM/ram_state_FSM_FFd1          29: SDRAM/refreshing 
+  4: ADDR<19>                                                                                                           17: CFGIN_n                               30: UDS_n 
+  5: ADDR<20>                                                                                                           18: IDE/dout_and0000/IDE/dout_and0000_D2  31: as_n_sync<0> 
+  6: ADDR<21>                                                                                                           19: IDE/ds_delay<0>                       32: as_n_sync<1> 
+  7: ADDR<22>                                                                                                           20: IDE/ds_delay<1>                       33: ide_enabled 
+  8: ADDR<23>                                                                                                           21: IDE/ds_delay<2>                       34: ideregister_dout<3> 
+  9: AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D  22: IDE/rom_bankSel<0>                    35: lds_n_sync<0> 
+ 10: AUTOCONFIG/cdtv                                                                                                    23: IDE/rom_bankSel<1>                    36: ram_access/ram_access_D2 
+ 11: AUTOCONFIG/cdtv_configured                                                                                         24: LDS_n                                 37: rw_sync<0> 
+ 12: AUTOCONFIG/ide_base<0>                                                                                             25: OVR_n.PIN                             38: uds_n_sync<0> 
+ 13: AUTOCONFIG/ide_base<1>                                                                                             26: RESET_n                               39: uds_n_sync<1> 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF 
+                     .........................X..X........... 2
+uds_n_sync<1>        .........................X...........X.. 2
+uds_n_sync<0>        .........................X...X.......... 2
+rw_sync<1>           .........................X..........X... 2
+ovr_detect           ........................XX.............. 2
+RAMOE_n              .......................X.XX..X.....X.... 5
+lds_n_sync<1>        .........................X........X..... 2
+lds_n_sync<0>        .......................X.X.............. 2
+ideregister_dout<3>  .................X....X..........X...... 3
+as_n_sync<1>         .........................X....X......... 2
+SDRAM/refresh_request<1> 
+                     .........................X.X............ 2
+SDRAM/ram_state_FSM_FFd1 
+                     ...............X.........X.............. 2
+IDE/ds_delay<2>      ..................XXX.................X. 4
+IDE/ds_delay<0>      ..................XXX.................X. 4
+AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D 
+                     ...X.........X.......................... 2
+ide_access/ide_access_D2 
+                     .XX.XXXXX..XX.X......................... 10
+ROM_BANK<0>          X....................X..........X....... 3
+AUTOCONFIG/cfgin     .........XX.....X........X.....X........ 5
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB6  ***********************************
+Number of function block inputs used/remaining:               23/31
+Number of signals used by logic mapping into function block:  23
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   /\4   1     FB6_1         (b)     (b)
+(unused)              0       0     0   5     FB6_2   74    I/O     I
+(unused)              0       0     0   5     FB6_3         (b)     
+(unused)              0       0     0   5     FB6_4         (b)     
+(unused)              0       0     0   5     FB6_5   76    I/O     I
+(unused)              0       0     0   5     FB6_6   77    I/O     I
+(unused)              0       0     0   5     FB6_7         (b)     
+(unused)              0       0     0   5     FB6_8   78    I/O     I
+(unused)              0       0     0   5     FB6_9   79    I/O     I
+(unused)              0       0     0   5     FB6_10        (b)     
+(unused)              0       0     0   5     FB6_11  80    I/O     I
+(unused)              0       0     0   5     FB6_12  81    I/O     I
+(unused)              0       0     0   5     FB6_13        (b)     
+(unused)              0       0     0   5     FB6_14  82    I/O     I
+(unused)              0       0     0   5     FB6_15  85    I/O     I
+$OpTx$FX_DC$212       2       0     0   3     FB6_16        (b)     (b)
+RAS_n_OBUF48          4       0   \/1   0     FB6_17  86    I/O     I
+ram_access/ram_access_D2
+                     10       5<-   0   0     FB6_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$197            9: AUTOCONFIG/addr_match<2>   17: SDRAM/ram_state_FSM_FFd4 
+  2: ADDR<19>                  10: AUTOCONFIG/addr_match<3>   18: SDRAM/timer_tRFC<0> 
+  3: ADDR<20>                  11: AUTOCONFIG/maprom_enabled  19: SDRAM/timer_tRFC<1> 
+  4: ADDR<21>                  12: AUTOCONFIG/ram_configured  20: otherram_en 
+  5: ADDR<22>                  13: CAS_n_OBUF49               21: ovl 
+  6: ADDR<23>                  14: SDRAM/ram_state_FSM_FFd1   22: ovr_detect 
+  7: AUTOCONFIG/addr_match<0>  15: SDRAM/ram_state_FSM_FFd2   23: rw_sync<1> 
+  8: AUTOCONFIG/addr_match<1>  16: SDRAM/ram_state_FSM_FFd3  
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+$OpTx$FX_DC$212      ............XXXX.XX..................... 6
+RAS_n_OBUF48         ............XXXXX....................... 5
+ram_access/ram_access_D2 
+                     XXXXXXXXXXXX.......XXXX................. 16
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB7  ***********************************
+Number of function block inputs used/remaining:               40/14
+Number of signals used by logic mapping into function block:  40
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   /\3   2     FB7_1         (b)     (b)
+ROM_BANK<1>           1       0     0   4     FB7_2   50    I/O     O
+(unused)              0       0     0   5     FB7_3         (b)     
+(unused)              0       0     0   5     FB7_4         (b)     
+DTACK_n               1       0     0   4     FB7_5   52    I/O     O
+(unused)              0       0     0   5     FB7_6   53    I/O     
+(unused)              0       0     0   5     FB7_7         (b)     
+autoconfig_cycle/autoconfig_cycle_D2
+                      1       0     0   4     FB7_8   54    I/O     (b)
+$OpTx$FX_DC$197       1       0     0   4     FB7_9   55    I/O     (b)
+ovl                   2       0     0   3     FB7_10        (b)     (b)
+as_n_sync<0>          2       0     0   3     FB7_11  56    I/O     I
+AUTOCONFIG/cdtv_configured
+                      2       0     0   3     FB7_12  58    I/O     I
+AUTOCONFIG/cdtv       2       0     0   3     FB7_13        (b)     (b)
+IDE/rom_bankSel<1>    3       0     0   2     FB7_14  59    I/O     I
+AUTOCONFIG/ac_state<1>
+                      3       0   \/1   1     FB7_15  60    I/O     I
+autoconfig_dout<1>    7       2<-   0   0     FB7_16        (b)     (b)
+CFGOUT_n              3       0   /\1   1     FB7_17  61    I/O     O
+autoconfig_dout<3>    8       3<-   0   0     FB7_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$197   15: ADDR<6>                                                     28: RESET_n 
+  2: ADDR<16>          16: ADDR<7>                                                     29: as_n_sync<1> 
+  3: ADDR<17>          17: ADDR<8>                                                     30: autoconf_dtack 
+  4: ADDR<18>          18: AS_n                                                        31: autoconfig_cycle/autoconfig_cycle_D2 
+  5: ADDR<19>          19: AUTOCONFIG/ac_state<0>                                      32: autoconfig_dout<1> 
+  6: ADDR<1>           20: AUTOCONFIG/ac_state<1>                                      33: autoconfig_dout<3> 
+  7: ADDR<20>          21: AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2  34: ide_enabled 
+  8: ADDR<21>          22: AUTOCONFIG/cfgin                                            35: ovr_detect 
+  9: ADDR<22>          23: AUTOCONFIG/zram_size<2>                                     36: ram_access/ram_access_D2 
+ 10: ADDR<23>          24: CFGOUT_n                                                    37: ram_ready 
+ 11: ADDR<2>           25: IDE/rom_bankSel<1>                                          38: rw_sync<1> 
+ 12: ADDR<3>           26: IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2          39: z2_state_FSM_FFd1 
+ 13: ADDR<4>           27: DBUS<15>.PIN                                                40: z2_state_FSM_FFd2 
+ 14: ADDR<5>          
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+ROM_BANK<1>          ........................X........X................ 2
+DTACK_n              .................X................XXX............. 4
+autoconfig_cycle/autoconfig_cycle_D2 
+                     .XXXX.XXXX...........X.X.......................... 10
+$OpTx$FX_DC$197      ..XXX.X........................................... 4
+ovl                  XX.....XXX.................XX........X............ 8
+as_n_sync<0>         .................X.........X...................... 2
+AUTOCONFIG/cdtv_configured 
+                     .XXXXXXXXXXXXXXXX..........XX........X............ 19
+AUTOCONFIG/cdtv      .XXXX.XXXX.................XX........X............ 11
+IDE/rom_bankSel<1>   ........................XXXX...................... 4
+AUTOCONFIG/ac_state<1> 
+                     ..................XXX......X...................... 4
+autoconfig_dout<1>   .....X....XXXXXXX.XX..X....X.XXX.....XXX.......... 18
+CFGOUT_n             ..................XX.......XX..................... 4
+autoconfig_dout<3>   .....X....XXXXXXX.XX.......X.XX.X....XXX.......... 17
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB8  ***********************************
+Number of function block inputs used/remaining:               40/14
+Number of signals used by logic mapping into function block:  40
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2
+                      1       0   /\4   0     FB8_1         (b)     (b)
+IDECS2_n              1       0     0   4     FB8_2   63    I/O     O
+IDE/dout_and0000/IDE/dout_and0000_D2
+                      1       0     0   4     FB8_3         (b)     (b)
+AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2
+                      1       0     0   4     FB8_4         (b)     (b)
+IDECS1_n              1       0     0   4     FB8_5   64    I/O     O
+idereg_dtack          2       0     0   3     FB8_6   65    I/O     (b)
+autoconf_dtack        2       0     0   3     FB8_7         (b)     (b)
+AUTOCONFIG/ram_configured
+                      2       0     0   3     FB8_8   66    I/O     I
+IDEBUF_OE             3       0     0   2     FB8_9   67    I/O     O
+AUTOCONFIG/ide_configured
+                      2       0     0   3     FB8_10        (b)     (b)
+IOW_n                 4       0     0   1     FB8_11  68    I/O     O
+IOR_n                 3       0     0   2     FB8_12  70    I/O     O
+$OpTx$FX_DC$188       2       0     0   3     FB8_13        (b)     (b)
+OVR_n                 1       0     0   4     FB8_14  71    I/O     I/O
+IDE/ds_delay<1>       3       0     0   2     FB8_15  72    I/O     (b)
+z2_state_FSM_FFd1     4       0     0   1     FB8_16        (b)     (b)
+z2_state_FSM_FFd2     5       0     0   0     FB8_17  73    I/O     I
+autoconfig_dout<2>    9       4<-   0   0     FB8_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$188         15: AUTOCONFIG/ac_state<1>                              28: autoconfig_cycle/autoconfig_cycle_D2 
+  2: ADDR<12>                16: AUTOCONFIG/zram_size<2>                             29: autoconfig_dout<2> 
+  3: ADDR<13>                17: IDE/ds_delay<0>                                     30: ide_access/ide_access_D2 
+  4: ADDR<15>                18: IDE/ds_delay<1>                                     31: ide_enabled 
+  5: ADDR<16>                19: IDE/ds_delay<2>                                     32: idereg_dtack 
+  6: ADDR<1>                 20: IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2  33: lds_n_sync<1> 
+  7: ADDR<2>                 21: IOR_n                                               34: ovr_detect 
+  8: ADDR<3>                 22: LDS_n                                               35: ram_access/ram_access_D2 
+  9: ADDR<4>                 23: RESET_n                                             36: ram_dtack 
+ 10: ADDR<5>                 24: RW                                                  37: rw_sync<1> 
+ 11: ADDR<6>                 25: UDS_n                                               38: uds_n_sync<1> 
+ 12: ADDR<7>                 26: as_n_sync<1>                                        39: z2_state_FSM_FFd1 
+ 13: ADDR<8>                 27: autoconf_dtack                                      40: z2_state_FSM_FFd2 
+ 14: AUTOCONFIG/ac_state<0> 
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2 
+                     ...XX..................X.....XXX......XX.......... 8
+IDECS2_n             .XXXX........................XX................... 6
+IDE/dout_and0000/IDE/dout_and0000_D2 
+                     ...XX..............X..X......XXX......XX.......... 9
+AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2 
+                     .....X.XXXXXX.............XX........X.XX.......... 12
+IDECS1_n             .XXXX........................XX................... 6
+idereg_dtack         ...XX.................X......XXX......XX.......... 8
+autoconf_dtack       ......................X...XX..........XX.......... 5
+AUTOCONFIG/ram_configured 
+                     .....XXXXXXXXXX.......X...XX........X.XX.......... 16
+IDEBUF_OE            ...XX................X.XX....XX................... 7
+AUTOCONFIG/ide_configured 
+                     .....XXXXXXXXXX.......X...XX........X.XX.......... 16
+IOW_n                ................XXX....X.X...........X............ 6
+IOR_n                ................XXX.X..X.X...........X............ 7
+$OpTx$FX_DC$188      ...XX......................X.XX................... 5
+OVR_n                .................................XX............... 2
+IDE/ds_delay<1>      ................XXX..................X............ 4
+z2_state_FSM_FFd1    ......................X..X......X....XXX.......... 6
+z2_state_FSM_FFd2    X.....................X..XX....X..XX..XX.......... 9
+autoconfig_dout<2>   .....XXXXXXXXXXX......X...XXX.......X.XX.......... 18
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+$OpTx$FX_DC$182 = !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & 
+	!RAS_n_OBUF48;    
+
+$OpTx$FX_DC$188 = autoconfig_cycle/autoconfig_cycle_D2
+	# !ADDR<16> & ide_enabled & ADDR<15> & 
+	ide_access/ide_access_D2;    
+
+$OpTx$FX_DC$197 = ADDR<20> & ADDR<19> & ADDR<18> & ADDR<17>;    
+
+$OpTx$FX_DC$202 = SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4;    
+
+$OpTx$FX_DC$212 = SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & SDRAM/timer_tRFC<1> & 
+	!CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & SDRAM/timer_tRFC<0> & 
+	!CAS_n_OBUF49;    
+
+AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D = AUTOCONFIG/ide_base<2>
+	$ ADDR<19>;    
+
+AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF = !RESET_n & !RAM_SIZE<0> & !RAM_SIZE<1>;    
+
+AUTOCONFIG/ac_state<0>.D = AUTOCONFIG/ac_state<0> & 
+	!AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2
+	# AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF & 
+	AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2
+	# !AUTOCONFIG/ac_state<0> & RESET_n & 
+	AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2;
+   AUTOCONFIG/ac_state<0>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ac_state<0>.AP = !RESET_n & !RAM_SIZE<0> & !RAM_SIZE<1>;
+   AUTOCONFIG/ac_state<0>.AR = !RESET_n & 
+	!AUTOCONFIG/ac_state<0>/AUTOCONFIG/ac_state<0>_SETF;    
+
+AUTOCONFIG/ac_state<1>.T = AUTOCONFIG/ac_state<0> & RESET_n & 
+	AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2
+	# !RESET_n & AUTOCONFIG/ac_state<1> & 
+	AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2;
+   AUTOCONFIG/ac_state<1>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ac_state<1>.AR = !RESET_n;    
+
+AUTOCONFIG/ac_state_not0001/AUTOCONFIG/ac_state_not0001_D2 = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<1> & z2_state_FSM_FFd1 & !rw_sync<1> & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/addr_match<0>.T = !AUTOCONFIG/addr_match<0> & RAM_SIZE<0> & 
+	!BUF_AUTOCONFIG/zram_size<2>
+	# DBUS<13>.PIN & !DBUS<15>.PIN & !DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<0> & 
+	BUF_AUTOCONFIG/zram_size<2>;
+   AUTOCONFIG/addr_match<0>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/addr_match<0>.AR = !RESET_n;
+   AUTOCONFIG/addr_match<0>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/addr_match<1>.T = !AUTOCONFIG/addr_match<1> & RAM_SIZE<0> & 
+	!BUF_AUTOCONFIG/zram_size<2>
+	# !DBUS<13>.PIN & !DBUS<15>.PIN & DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<1> & 
+	BUF_AUTOCONFIG/zram_size<2>
+	# DBUS<13>.PIN & !DBUS<15>.PIN & !DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<1> & !RAM_SIZE<0> & 
+	RAM_SIZE<1>;
+   AUTOCONFIG/addr_match<1>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/addr_match<1>.AR = !RESET_n;
+   AUTOCONFIG/addr_match<1>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/addr_match<2>.T = !AUTOCONFIG/addr_match<2> & RAM_SIZE<0> & 
+	RAM_SIZE<1>
+	# !DBUS<15>.PIN & DBUS<14>.PIN & !DBUS<12>.PIN & 
+	!AUTOCONFIG/addr_match<2> & RAM_SIZE<1>
+	# DBUS<13>.PIN & !DBUS<15>.PIN & DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<2> & RAM_SIZE<0>;
+   AUTOCONFIG/addr_match<2>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/addr_match<2>.AR = !RESET_n;
+   AUTOCONFIG/addr_match<2>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/addr_match<3>.T = !AUTOCONFIG/addr_match<3> & RAM_SIZE<0> & 
+	RAM_SIZE<1>
+	# DBUS<13>.PIN & !DBUS<15>.PIN & DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<3> & RAM_SIZE<1>
+	# !DBUS<13>.PIN & DBUS<15>.PIN & !DBUS<14>.PIN & 
+	!DBUS<12>.PIN & !AUTOCONFIG/addr_match<3> & RAM_SIZE<0>;
+   AUTOCONFIG/addr_match<3>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/addr_match<3>.AR = !RESET_n;
+   AUTOCONFIG/addr_match<3>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/cdtv.D = Vcc;
+   AUTOCONFIG/cdtv.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/cdtv.AR = !RESET_n;
+   AUTOCONFIG/cdtv.CE = ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	!ADDR<19> & !ADDR<18> & !ADDR<17> & ADDR<16> & rw_sync<1> & 
+	!as_n_sync<1>;    
+
+AUTOCONFIG/cdtv_configured.D = Vcc;
+   AUTOCONFIG/cdtv_configured.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/cdtv_configured.AR = !RESET_n;
+   AUTOCONFIG/cdtv_configured.CE = ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	!ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & !ADDR<2> & 
+	ADDR<19> & !ADDR<18> & !ADDR<17> & !ADDR<16> & !ADDR<1> & 
+	!rw_sync<1> & !as_n_sync<1> & ADDR<3> & ADDR<6>;    
+
+AUTOCONFIG/cfgin.D = !CFGIN_n & !AUTOCONFIG/cdtv
+	# !CFGIN_n & AUTOCONFIG/cdtv_configured;
+   AUTOCONFIG/cfgin.CLK = as_n_sync<1>;
+   AUTOCONFIG/cfgin.AR = !RESET_n;    
+
+AUTOCONFIG/ide_base<0>.D = DBUS<13>.PIN;
+   AUTOCONFIG/ide_base<0>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ide_base<0>.AR = !RESET_n;
+   AUTOCONFIG/ide_base<0>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/ide_base<1>.D = DBUS<14>.PIN;
+   AUTOCONFIG/ide_base<1>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ide_base<1>.AR = !RESET_n;
+   AUTOCONFIG/ide_base<1>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/ide_base<2>.D = DBUS<15>.PIN;
+   AUTOCONFIG/ide_base<2>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ide_base<2>.AR = !RESET_n;
+   AUTOCONFIG/ide_base<2>.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/ide_configured.D = Vcc;
+   AUTOCONFIG/ide_configured.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ide_configured.AR = !RESET_n;
+   AUTOCONFIG/ide_configured.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/maprom_enabled.D = Gnd;
+   AUTOCONFIG/maprom_enabled.CLK = Gnd;
+   AUTOCONFIG/maprom_enabled.AP = !RESET_n & enable_maprom & ovr_detect;
+   AUTOCONFIG/maprom_enabled.AR = !RESET_n & 
+	!AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF;    
+
+AUTOCONFIG/maprom_enabled/AUTOCONFIG/maprom_enabled_SETF = !RESET_n & enable_maprom & ovr_detect;    
+
+AUTOCONFIG/ram_configured.D = Vcc;
+   AUTOCONFIG/ram_configured.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/ram_configured.AR = !RESET_n;
+   AUTOCONFIG/ram_configured.CE = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	z2_state_FSM_FFd1 & !AUTOCONFIG/ac_state<1> & !rw_sync<1> & 
+	!autoconf_dtack & z2_state_FSM_FFd2 & ADDR<3> & ADDR<6> & 
+	autoconfig_cycle/autoconfig_cycle_D2;    
+
+AUTOCONFIG/zram_size<0>.D = !RAM_SIZE<0> & RAM_SIZE<1>;
+   AUTOCONFIG/zram_size<0>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/zram_size<0>.AR = !RESET_n;    
+
+AUTOCONFIG/zram_size<2>.D = BUF_AUTOCONFIG/zram_size<2>;
+   AUTOCONFIG/zram_size<2>.CLK = MEMCLK;	// GCK
+   AUTOCONFIG/zram_size<2>.AR = !RESET_n;    
+
+!BA<0>.D = !ADDR<22> & !ovl;
+   BA<0>.CLK = MEMCLK;	// GCK
+   BA<0>.CE = RESET_n & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd3;    
+
+!BA<1>.D = !ADDR<23> & !ovl;
+   BA<1>.CLK = MEMCLK;	// GCK
+   BA<1>.CE = RESET_n & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd3;    
+
+BUF_AUTOCONFIG/zram_size<2> = RAM_SIZE<1>
+	$ RAM_SIZE<0>;    
+
+BUF_SDRAM/ram_state_FSM_FFd1 = SDRAM/ram_state_FSM_FFd3 & 
+	!SDRAM/ram_state_FSM_FFd4
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/refresh_request<1> & !CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd1 & !z2_state_FSM_FFd2 & 
+	!CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd1 & !CAS_n_OBUF49 & 
+	!ram_access/ram_access_D2
+;Imported pterms FB1_5
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & z2_state_FSM_FFd1;    
+
+!CAS_n.D = CAS_n_OBUF49;
+   CAS_n.CLK = MEMCLK;	// GCK
+   CAS_n.CE = RESET_n;    
+
+CAS_n_OBUF49 = SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd4
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd4 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;    
+
+!CFGOUT_n.D = !AUTOCONFIG/ac_state<0> & AUTOCONFIG/ac_state<1>;
+   CFGOUT_n.CLK = as_n_sync<1>;
+   CFGOUT_n.AP = !RESET_n;    
+
+CKE.D = !z2_state_FSM_FFd1 & !z2_state_FSM_FFd2;
+   CKE.CLK = MEMCLK;	// GCK
+   CKE.AP = !RESET_n;
+   CKE.CE = !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4;    
+
+DBUS<12> = autoconfig_dout<0> & 
+	autoconfig_cycle/autoconfig_cycle_D2
+	# ideregister_dout<0> & 
+	!autoconfig_cycle/autoconfig_cycle_D2;
+   DBUS<12>.OE = RESET_n & RW & !uds_n_sync<1> & $OpTx$FX_DC$188;    
+
+DBUS<13> = autoconfig_dout<1> & 
+	autoconfig_cycle/autoconfig_cycle_D2
+	# ideregister_dout<1> & 
+	!autoconfig_cycle/autoconfig_cycle_D2;
+   DBUS<13>.OE = RESET_n & RW & !uds_n_sync<1> & $OpTx$FX_DC$188;    
+
+DBUS<14> = autoconfig_dout<2> & 
+	autoconfig_cycle/autoconfig_cycle_D2
+	# ideregister_dout<2> & 
+	!autoconfig_cycle/autoconfig_cycle_D2;
+   DBUS<14>.OE = RESET_n & RW & !uds_n_sync<1> & $OpTx$FX_DC$188;    
+
+DBUS<15> = autoconfig_dout<3> & 
+	autoconfig_cycle/autoconfig_cycle_D2
+	# ideregister_dout<3> & 
+	!autoconfig_cycle/autoconfig_cycle_D2;
+   DBUS<15>.OE = RESET_n & RW & !uds_n_sync<1> & $OpTx$FX_DC$188;    
+
+DQMH.D = DQMH & !$OpTx$FX_DC$182
+;Imported pterms FB1_3
+	# $OpTx$FX_DC$202
+	# SDRAM/ram_state_FSM_FFd4 & uds_n_sync<1> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   DQMH.CLK = MEMCLK;	// GCK
+   DQMH.AP = !RESET_n;    
+
+DQML.D = $OpTx$FX_DC$202
+	# DQML & !$OpTx$FX_DC$182
+	# SDRAM/ram_state_FSM_FFd4 & lds_n_sync<1> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   DQML.CLK = MEMCLK;	// GCK
+   DQML.AP = !RESET_n;    
+
+DTACK_n = Gnd;
+   DTACK_n.OE = ram_ready & !AS_n & ovr_detect & 
+	ram_access/ram_access_D2;    
+
+IDE/dout_and0000/IDE/dout_and0000_D2 = RESET_n & !ADDR<16> & z2_state_FSM_FFd1 & 
+	ide_enabled & !idereg_dtack & z2_state_FSM_FFd2 & ADDR<15> & 
+	ide_access/ide_access_D2 & !IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2;    
+
+!IDE/ds_delay<0>.T = IDE/ds_delay<0> & IDE/ds_delay<1> & 
+	IDE/ds_delay<2>;
+   IDE/ds_delay<0>.CLK = MEMCLK;	// GCK
+   IDE/ds_delay<0>.AR = uds_n_sync<1>;    
+
+!IDE/ds_delay<1>.D = !IDE/ds_delay<0> & !IDE/ds_delay<1>
+	# IDE/ds_delay<0> & IDE/ds_delay<1> & 
+	!IDE/ds_delay<2>;
+   IDE/ds_delay<1>.CLK = MEMCLK;	// GCK
+   IDE/ds_delay<1>.AR = uds_n_sync<1>;    
+
+IDE/ds_delay<2>.T = IDE/ds_delay<0> & IDE/ds_delay<1> & 
+	!IDE/ds_delay<2>;
+   IDE/ds_delay<2>.CLK = MEMCLK;	// GCK
+   IDE/ds_delay<2>.AR = uds_n_sync<1>;    
+
+IDE/rom_bankSel<0>.D = DBUS<14>.PIN & 
+	IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2
+	# IDE/rom_bankSel<0> & 
+	!IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2;
+   IDE/rom_bankSel<0>.CLK = MEMCLK;	// GCK
+   IDE/rom_bankSel<0>.AR = !RESET_n;    
+
+IDE/rom_bankSel<1>.D = DBUS<15>.PIN & 
+	IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2
+	# IDE/rom_bankSel<1> & 
+	!IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2;
+   IDE/rom_bankSel<1>.CLK = MEMCLK;	// GCK
+   IDE/rom_bankSel<1>.AR = !RESET_n;    
+
+IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2 = !ADDR<16> & !RW & z2_state_FSM_FFd1 & ide_enabled & 
+	!idereg_dtack & z2_state_FSM_FFd2 & ADDR<15> & 
+	ide_access/ide_access_D2;    
+
+!IDEBUF_OE = !ADDR<16> & !RW & ide_enabled & !ADDR<15> & 
+	ide_access/ide_access_D2
+	# !ADDR<16> & ide_enabled & !UDS_n & !ADDR<15> & 
+	ide_access/ide_access_D2
+	# !ADDR<16> & ide_enabled & !LDS_n & !ADDR<15> & 
+	ide_access/ide_access_D2;    
+
+!IDECS1_n = !ADDR<13> & ADDR<12> & !ADDR<16> & ide_enabled & 
+	!ADDR<15> & ide_access/ide_access_D2;    
+
+!IDECS2_n = ADDR<13> & !ADDR<12> & !ADDR<16> & ide_enabled & 
+	!ADDR<15> & ide_access/ide_access_D2;    
+
+IDE_ROMEN = !ide_access/ide_access_D2
+	# !ADDR<16> & ide_enabled;    
+
+IOR_n.T = IDE/ds_delay<0> & IDE/ds_delay<2> & RW & 
+	!as_n_sync<1> & IOR_n
+	# IDE/ds_delay<1> & IDE/ds_delay<2> & RW & 
+	!as_n_sync<1> & IOR_n;
+   IOR_n.CLK = MEMCLK;	// GCK
+   IOR_n.AP = uds_n_sync<1>;    
+
+IOW_n.D = IDE/ds_delay<0> & IDE/ds_delay<2>
+	# IDE/ds_delay<1> & IDE/ds_delay<2>;
+   IOW_n.CLK = MEMCLK;	// GCK
+   IOW_n.AP = uds_n_sync<1>;
+   IOW_n.CE = !RW & !as_n_sync<1>;    
+
+MA<0>.D = ADDR<1> & $OpTx$FX_DC$182
+	# MA<0> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & ADDR<10> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<0>.CLK = MEMCLK;	// GCK
+   MA<0>.CE = RESET_n;    
+
+MA<1>.D = ADDR<2> & $OpTx$FX_DC$182
+	# MA<1> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & ADDR<11> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<1>.CLK = MEMCLK;	// GCK
+   MA<1>.CE = RESET_n;    
+
+MA<2>.D = MA<2> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<3> & $OpTx$FX_DC$182
+	# ADDR<12> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<2>.CLK = MEMCLK;	// GCK
+   MA<2>.CE = RESET_n;    
+
+MA<3>.D = ADDR<4> & $OpTx$FX_DC$182
+	# MA<3> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<13> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<3>.CLK = MEMCLK;	// GCK
+   MA<3>.CE = RESET_n;    
+
+MA<4>.D = ADDR<5> & $OpTx$FX_DC$182
+	# MA<4> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & ADDR<14> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<4>.CLK = MEMCLK;	// GCK
+   MA<4>.CE = RESET_n;    
+
+MA<5>.D = MA<5> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<6> & $OpTx$FX_DC$182
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd4 & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & ADDR<15> & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<5>.CLK = MEMCLK;	// GCK
+   MA<5>.CE = RESET_n;    
+
+MA<6>.D = ADDR<7> & $OpTx$FX_DC$182
+	# MA<6> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<16> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<6>.CLK = MEMCLK;	// GCK
+   MA<6>.CE = RESET_n;    
+
+MA<7>.D = ADDR<8> & $OpTx$FX_DC$182
+	# MA<7> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<17> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<7>.CLK = MEMCLK;	// GCK
+   MA<7>.CE = RESET_n;    
+
+MA<8>.D = MA<8> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<9> & $OpTx$FX_DC$182
+	# ADDR<18> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<8>.CLK = MEMCLK;	// GCK
+   MA<8>.CE = RESET_n;    
+
+MA<9>.D = MA<9> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<19> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd4 & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !ADDR<23> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & ovl & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<9>.CLK = MEMCLK;	// GCK
+   MA<9>.CE = RESET_n;    
+
+MA<10>.D = $OpTx$FX_DC$182
+	# MA<10> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# SDRAM/ram_state_FSM_FFd3 & MEMW_n_OBUF47
+	# ADDR<20> & !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+;Imported pterms FB1_14
+	# !SDRAM/ram_state_FSM_FFd1 & ovl & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;
+   MA<10>.CLK = MEMCLK;	// GCK
+   MA<10>.CE = RESET_n;    
+
+MA<11>.D = MA<11> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# ADDR<21> & !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd3
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd3 & ovl;
+   MA<11>.CLK = MEMCLK;	// GCK
+   MA<11>.CE = RESET_n;    
+
+!MEMW_n.D = MEMW_n_OBUF47;
+   MEMW_n.CLK = MEMCLK;	// GCK
+   MEMW_n.CE = RESET_n;    
+
+MEMW_n_OBUF47 = SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & RAS_n_OBUF48
+	# !SDRAM/ram_state_FSM_FFd2 & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & RAS_n_OBUF48;    
+
+OVR_n = Gnd;
+   OVR_n.OE = ovr_detect & ram_access/ram_access_D2;    
+
+RAMCS_n.D = $OpTx$FX_DC$202
+	# RAMCS_n & SDRAM/ram_state_FSM_FFd3 & 
+	!CAS_n_OBUF49
+	# RAMCS_n & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & CAS_n_OBUF49;
+   RAMCS_n.CLK = MEMCLK;	// GCK
+   RAMCS_n.AP = !RESET_n;    
+
+RAMOE_n = !RESET_n
+	# !ram_access/ram_access_D2
+	# RW & UDS_n & LDS_n;    
+
+!RAS_n.D = RAS_n_OBUF48;
+   RAS_n.CLK = MEMCLK;	// GCK
+   RAS_n.CE = RESET_n;    
+
+RAS_n_OBUF48 = SDRAM/ram_state_FSM_FFd2 & 
+	!SDRAM/ram_state_FSM_FFd4 & CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd3 & 
+	!SDRAM/ram_state_FSM_FFd4 & CAS_n_OBUF49
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd3 & 
+	!SDRAM/ram_state_FSM_FFd4
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & 
+	!SDRAM/ram_state_FSM_FFd4;    
+
+ROM_BANK<0> = IDE/rom_bankSel<0> & ide_enabled
+	# ADDR<16> & !ide_enabled;    
+
+ROM_BANK<1> = IDE/rom_bankSel<1> & ide_enabled;    
+
+SDRAM/init_refreshed.D = Vcc;
+   SDRAM/init_refreshed.CLK = MEMCLK;	// GCK
+   SDRAM/init_refreshed.AR = !RESET_n;
+   SDRAM/init_refreshed.CE = SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & 
+	SDRAM/ram_state_FSM_FFd4 & !ram_ready & !SDRAM/timer_tRFC<1> & 
+	!SDRAM/timer_tRFC<0> & !SDRAM/init_refreshed;    
+
+SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 = SDRAM/ram_state_FSM_FFd3
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd4;    
+
+SDRAM/ram_state_FSM_FFd1.D = BUF_SDRAM/ram_state_FSM_FFd1;
+   SDRAM/ram_state_FSM_FFd1.CLK = MEMCLK;	// GCK
+   SDRAM/ram_state_FSM_FFd1.AR = !RESET_n;    
+
+!SDRAM/ram_state_FSM_FFd2.D = !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd4 & !$OpTx$FX_DC$212
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & rw_sync<1> & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & !$OpTx$FX_DC$212
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & 
+	!BUF_SDRAM/ram_state_FSM_FFd1 & !$OpTx$FX_DC$212
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & ram_ready & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & BUF_SDRAM/ram_state_FSM_FFd1 & !$OpTx$FX_DC$212
+;Imported pterms FB1_6
+	# SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & 
+	!SDRAM/refresh_request<1> & SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & 
+	BUF_SDRAM/ram_state_FSM_FFd1 & !$OpTx$FX_DC$212;
+   SDRAM/ram_state_FSM_FFd2.CLK = MEMCLK;	// GCK
+   SDRAM/ram_state_FSM_FFd2.AR = !RESET_n;    
+
+!SDRAM/ram_state_FSM_FFd3.D = SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & 
+	SDRAM/ram_state_FSM_FFd4 & !BUF_SDRAM/ram_state_FSM_FFd1
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & 
+	SDRAM/ram_state_FSM_FFd4 & BUF_SDRAM/ram_state_FSM_FFd1
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd3 & SDRAM/ram_state_FSM_FFd4 & !ram_ready & 
+	!SDRAM/timer_tRFC<0> & SDRAM/init_refreshed & !CAS_n_OBUF49 & 
+	BUF_SDRAM/ram_state_FSM_FFd1
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & 
+	SDRAM/ram_state_FSM_FFd4 & !ram_ready & !SDRAM/timer_tRFC<1> & 
+	!SDRAM/timer_tRFC<0> & SDRAM/init_refreshed & !CAS_n_OBUF49;
+   SDRAM/ram_state_FSM_FFd3.CLK = MEMCLK;	// GCK
+   SDRAM/ram_state_FSM_FFd3.AR = !RESET_n;    
+
+SDRAM/ram_state_FSM_FFd4.D = $OpTx$FX_DC$212
+	# SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2
+	# SDRAM/ram_state_FSM_FFd2 & 
+	!SDRAM/ram_state_FSM_FFd4 & BUF_SDRAM/ram_state_FSM_FFd1
+	# !SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & 
+	!MEMW_n_OBUF47 & !BUF_SDRAM/ram_state_FSM_FFd1
+;Imported pterms FB1_2
+	# SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & 
+	!SDRAM/refresh_request<1> & BUF_SDRAM/ram_state_FSM_FFd1
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & !z2_state_FSM_FFd1 & 
+	z2_state_FSM_FFd2
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & ram_ready & 
+	SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & BUF_SDRAM/ram_state_FSM_FFd1 & !$OpTx$FX_DC$212
+;Imported pterms FB1_18
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & z2_state_FSM_FFd1
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & !rw_sync<1>
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & 
+	!BUF_SDRAM/ram_state_FSM_FFd1;
+   SDRAM/ram_state_FSM_FFd4.CLK = MEMCLK;	// GCK
+   SDRAM/ram_state_FSM_FFd4.AR = !RESET_n;    
+
+SDRAM/refresh_request<0>.D = !SDRAM/refresh_timer<0> & !SDRAM/refresh_timer<1> & 
+	!SDRAM/refresh_timer<2> & !SDRAM/refresh_timer<3>;
+   SDRAM/refresh_request<0>.CLK = MEMCLK;	// GCK
+   SDRAM/refresh_request<0>.AR = !RESET_n;    
+
+SDRAM/refresh_request<1>.D = SDRAM/refresh_request<0>;
+   SDRAM/refresh_request<1>.CLK = MEMCLK;	// GCK
+   SDRAM/refresh_request<1>.AR = !RESET_n;    
+
+!SDRAM/refresh_timer<0>.T = !SDRAM/refresh_timer<0> & !SDRAM/refresh_timer<1> & 
+	!SDRAM/refresh_timer<2> & !SDRAM/refresh_timer<3>;
+   SDRAM/refresh_timer<0>.CLK = ECLK;
+   SDRAM/refresh_timer<0>.AR = !SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF;    
+
+SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF = RESET_n & !SDRAM/refreshing;    
+
+!SDRAM/refresh_timer<1>.T = SDRAM/refresh_timer<0>
+	# !SDRAM/refresh_timer<1> & !SDRAM/refresh_timer<2> & 
+	!SDRAM/refresh_timer<3>;
+   SDRAM/refresh_timer<1>.CLK = ECLK;
+   SDRAM/refresh_timer<1>.AR = !SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF;    
+
+SDRAM/refresh_timer<2>.T = !SDRAM/refresh_timer<0> & !SDRAM/refresh_timer<1> & 
+	SDRAM/refresh_timer<2>
+	# !SDRAM/refresh_timer<0> & !SDRAM/refresh_timer<1> & 
+	SDRAM/refresh_timer<3>;
+   SDRAM/refresh_timer<2>.CLK = ECLK;
+   SDRAM/refresh_timer<2>.AP = !SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF;    
+
+SDRAM/refresh_timer<3>.T = !SDRAM/refresh_timer<0> & !SDRAM/refresh_timer<1> & 
+	!SDRAM/refresh_timer<2> & SDRAM/refresh_timer<3>;
+   SDRAM/refresh_timer<3>.CLK = ECLK;
+   SDRAM/refresh_timer<3>.AR = !SDRAM/refresh_timer<0>/SDRAM/refresh_timer<0>_RSTF;    
+
+SDRAM/refreshing.D = SDRAM/refreshing & !$OpTx$FX_DC$202
+	# SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2 & 
+	CAS_n_OBUF49;
+   SDRAM/refreshing.CLK = MEMCLK;	// GCK
+   SDRAM/refreshing.CE = RESET_n;    
+
+SDRAM/timer_tRFC<0>.T = SDRAM/ram_state_FSM_FFd3 & !SDRAM/timer_tRFC<0> & 
+	CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & SDRAM/timer_tRFC<1> & 
+	!SDRAM/timer_tRFC<0>
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & SDRAM/timer_tRFC<0> & 
+	!CAS_n_OBUF49;
+   SDRAM/timer_tRFC<0>.CLK = MEMCLK;	// GCK
+   SDRAM/timer_tRFC<0>.CE = RESET_n;    
+
+SDRAM/timer_tRFC<1>.T = SDRAM/ram_state_FSM_FFd3 & !SDRAM/timer_tRFC<1> & 
+	CAS_n_OBUF49
+	# SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd3 & SDRAM/timer_tRFC<1> & 
+	!SDRAM/timer_tRFC<0> & !CAS_n_OBUF49;
+   SDRAM/timer_tRFC<1>.CLK = MEMCLK;	// GCK
+   SDRAM/timer_tRFC<1>.CE = RESET_n;    
+
+as_n_sync<0>.D = AS_n;
+   as_n_sync<0>.CLK = MEMCLK;	// GCK
+   as_n_sync<0>.AP = !RESET_n;    
+
+as_n_sync<1>.D = as_n_sync<0>;
+   as_n_sync<1>.CLK = MEMCLK;	// GCK
+   as_n_sync<1>.AP = !RESET_n;    
+
+autoconf_dtack.D = z2_state_FSM_FFd1 & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & autoconfig_cycle/autoconfig_cycle_D2;
+   autoconf_dtack.CLK = MEMCLK;	// GCK
+   autoconf_dtack.AR = !RESET_n;    
+
+autoconfig_cycle/autoconfig_cycle_D2 = ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	ADDR<19> & !ADDR<18> & !ADDR<17> & !ADDR<16> & 
+	AUTOCONFIG/cfgin & CFGOUT_n;    
+
+!autoconfig_dout<0>.D = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !ADDR<3> & ADDR<6>
+	# !ADDR<8> & !ADDR<7> & ADDR<5> & !ADDR<4> & 
+	ADDR<2> & ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	AUTOCONFIG/ac_state<0> & ADDR<1> & !ADDR<3> & !ADDR<6>
+;Imported pterms FB3_18
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & ADDR<4> & 
+	!ADDR<2> & !ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & ADDR<1> & !AUTOCONFIG/zram_size<0> & !ADDR<3>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<2> & 
+	!AUTOCONFIG/ac_state<0> & !ADDR<1> & !AUTOCONFIG/ac_state<1> & !ADDR<3> & 
+	!ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<2> & 
+	!autoconfig_dout<0> & !ADDR<1> & AUTOCONFIG/ac_state<1> & !ADDR<3> & 
+	!ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<2> & 
+	!ADDR<1> & !AUTOCONFIG/ac_state<1> & !ADDR<3> & !ADDR<6> & 
+	!IDE_ENABLE;
+   autoconfig_dout<0>.CLK = MEMCLK;	// GCK
+   autoconfig_dout<0>.AR = !RESET_n;
+   autoconfig_dout<0>.CE = z2_state_FSM_FFd1 & rw_sync<1> & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & autoconfig_cycle/autoconfig_cycle_D2;    
+
+!autoconfig_dout<1>.D = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !ADDR<3> & ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & ADDR<4> & 
+	ADDR<2> & ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !autoconfig_dout<1> & !ADDR<1> & 
+	AUTOCONFIG/ac_state<1> & !ADDR<3>
+;Imported pterms FB7_15
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	!AUTOCONFIG/ac_state<1> & !ADDR<3>
+;Imported pterms FB7_17
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & ADDR<1> & 
+	!AUTOCONFIG/zram_size<2> & !ADDR<3>;
+   autoconfig_dout<1>.CLK = MEMCLK;	// GCK
+   autoconfig_dout<1>.AR = !RESET_n;
+   autoconfig_dout<1>.CE = z2_state_FSM_FFd1 & rw_sync<1> & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & autoconfig_cycle/autoconfig_cycle_D2;    
+
+!autoconfig_dout<2>.D = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !ADDR<3> & ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & ADDR<4> & 
+	ADDR<2> & !ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & ADDR<4> & 
+	!ADDR<2> & ADDR<1> & !ADDR<3> & !ADDR<6>
+;Imported pterms FB8_1
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	ADDR<2> & ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	AUTOCONFIG/ac_state<0> & ADDR<1> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	ADDR<1> & !AUTOCONFIG/zram_size<2> & !ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !autoconfig_dout<2> & !ADDR<1> & 
+	AUTOCONFIG/ac_state<1> & !ADDR<3>;
+   autoconfig_dout<2>.CLK = MEMCLK;	// GCK
+   autoconfig_dout<2>.AR = !RESET_n;
+   autoconfig_dout<2>.CE = z2_state_FSM_FFd1 & rw_sync<1> & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & autoconfig_cycle/autoconfig_cycle_D2;    
+
+!autoconfig_dout<3>.D = !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !ADDR<3> & ADDR<6>
+	# !ADDR<8> & !ADDR<7> & ADDR<5> & !ADDR<4> & 
+	ADDR<2> & ADDR<1> & ADDR<3> & !ADDR<6>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & ADDR<4> & 
+	ADDR<2> & ADDR<1> & !ADDR<3> & !ADDR<6>
+;Imported pterms FB7_1
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & AUTOCONFIG/ac_state<0> & ADDR<1> & !ADDR<3>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !autoconfig_dout<3> & !ADDR<1> & 
+	AUTOCONFIG/ac_state<1> & !ADDR<3>
+	# !ADDR<8> & !ADDR<7> & !ADDR<5> & !ADDR<4> & 
+	!ADDR<2> & !AUTOCONFIG/ac_state<0> & !ADDR<1> & 
+	!AUTOCONFIG/ac_state<1> & ADDR<3> & !ADDR<6>;
+   autoconfig_dout<3>.CLK = MEMCLK;	// GCK
+   autoconfig_dout<3>.AR = !RESET_n;
+   autoconfig_dout<3>.CE = z2_state_FSM_FFd1 & rw_sync<1> & !autoconf_dtack & 
+	z2_state_FSM_FFd2 & autoconfig_cycle/autoconfig_cycle_D2;    
+
+enable_maprom.T = DBUS<12>.PIN & RESET_n & !enable_maprom & 
+	IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2
+	# !DBUS<12>.PIN & RESET_n & enable_maprom & 
+	IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2;
+   enable_maprom.CLK = MEMCLK;	// GCK    
+
+ide_access/ide_access_D2 = ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	AUTOCONFIG/ide_base<0> & AUTOCONFIG/ide_base<1> & ADDR<18> & ADDR<17> & 
+	AUTOCONFIG/ide_configured & 
+	!AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D
+	# ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	AUTOCONFIG/ide_base<0> & !AUTOCONFIG/ide_base<1> & !ADDR<18> & ADDR<17> & 
+	AUTOCONFIG/ide_configured & 
+	!AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D
+	# ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	!AUTOCONFIG/ide_base<0> & AUTOCONFIG/ide_base<1> & ADDR<18> & !ADDR<17> & 
+	AUTOCONFIG/ide_configured & 
+	!AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D
+	# ADDR<23> & ADDR<22> & ADDR<21> & !ADDR<20> & 
+	!AUTOCONFIG/ide_base<0> & !AUTOCONFIG/ide_base<1> & !ADDR<18> & !ADDR<17> & 
+	AUTOCONFIG/ide_configured & 
+	!AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000/AUTOCONFIG/Mcompar_ide_access_cmp_eq0000_or0001_xor0000_D;    
+
+ide_enabled.T = !RW & !ide_enabled & IDE_ENABLE & 
+	ide_access/ide_access_D2;
+   ide_enabled.CLK = MEMCLK;	// GCK
+   ide_enabled.AR = !RESET_n;    
+
+idereg_dtack.D = !ADDR<16> & z2_state_FSM_FFd1 & ide_enabled & 
+	!idereg_dtack & z2_state_FSM_FFd2 & ADDR<15> & 
+	ide_access/ide_access_D2;
+   idereg_dtack.CLK = MEMCLK;	// GCK
+   idereg_dtack.AR = !RESET_n;    
+
+ideregister_dout<0>.D = enable_maprom & 
+	IDE/dout_and0000/IDE/dout_and0000_D2
+	# ideregister_dout<0> & 
+	!IDE/dout_and0000/IDE/dout_and0000_D2;
+   ideregister_dout<0>.CLK = MEMCLK;	// GCK    
+
+ideregister_dout<1>.D = otherram_en & 
+	IDE/dout_and0000/IDE/dout_and0000_D2
+	# ideregister_dout<1> & 
+	!IDE/dout_and0000/IDE/dout_and0000_D2;
+   ideregister_dout<1>.CLK = MEMCLK;	// GCK    
+
+ideregister_dout<2>.D = IDE/rom_bankSel<0> & 
+	IDE/dout_and0000/IDE/dout_and0000_D2
+	# ideregister_dout<2> & 
+	!IDE/dout_and0000/IDE/dout_and0000_D2;
+   ideregister_dout<2>.CLK = MEMCLK;	// GCK    
+
+ideregister_dout<3>.D = IDE/rom_bankSel<1> & 
+	IDE/dout_and0000/IDE/dout_and0000_D2
+	# ideregister_dout<3> & 
+	!IDE/dout_and0000/IDE/dout_and0000_D2;
+   ideregister_dout<3>.CLK = MEMCLK;	// GCK    
+
+lds_n_sync<0>.D = LDS_n;
+   lds_n_sync<0>.CLK = MEMCLK;	// GCK
+   lds_n_sync<0>.AP = !RESET_n;    
+
+lds_n_sync<1>.D = lds_n_sync<0>;
+   lds_n_sync<1>.CLK = MEMCLK;	// GCK
+   lds_n_sync<1>.AP = !RESET_n;    
+
+otherram_en.D = DBUS<13>.PIN & 
+	IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2
+	# otherram_en & 
+	!IDE/rom_bankSel_not0001/IDE/rom_bankSel_not0001_D2;
+   otherram_en.CLK = MEMCLK;	// GCK
+   otherram_en.AR = !RESET_n;    
+
+ovl.D = Gnd;
+   ovl.CLK = MEMCLK;	// GCK
+   ovl.AP = !RESET_n;
+   ovl.CE = ADDR<23> & !ADDR<22> & ADDR<21> & ADDR<16> & 
+	!rw_sync<1> & !as_n_sync<1> & $OpTx$FX_DC$197;    
+
+ovr_detect.D = OVR_n.PIN;
+   ovr_detect.CLK = RESET_n;    
+
+ram_access/ram_access_D2 = ADDR<23> & ADDR<22> & !ADDR<21> & !ADDR<20> & 
+	ovr_detect
+	# ADDR<23> & !ADDR<22> & !ADDR<21> & 
+	AUTOCONFIG/addr_match<3> & AUTOCONFIG/ram_configured
+	# !ADDR<23> & ADDR<22> & ADDR<21> & 
+	AUTOCONFIG/addr_match<2> & AUTOCONFIG/ram_configured
+	# !ADDR<23> & ADDR<22> & !ADDR<21> & 
+	AUTOCONFIG/addr_match<1> & AUTOCONFIG/ram_configured
+	# !ADDR<23> & !ADDR<22> & ADDR<21> & 
+	AUTOCONFIG/addr_match<0> & AUTOCONFIG/ram_configured
+;Imported pterms FB6_1
+	# ADDR<23> & ADDR<22> & ADDR<21> & ADDR<20> & 
+	rw_sync<1> & AUTOCONFIG/maprom_enabled
+	# ADDR<23> & ADDR<22> & ADDR<21> & ADDR<20> & 
+	!rw_sync<1> & !AUTOCONFIG/maprom_enabled
+	# ADDR<23> & !ADDR<22> & ADDR<21> & otherram_en & 
+	ovr_detect & !$OpTx$FX_DC$197
+	# !ADDR<23> & !ADDR<22> & !ADDR<21> & !ADDR<20> & 
+	!ADDR<19> & rw_sync<1> & ovl & AUTOCONFIG/maprom_enabled
+;Imported pterms FB6_17
+	# ADDR<23> & ADDR<22> & !ADDR<21> & !ADDR<19> & 
+	ovr_detect;    
+
+ram_dtack.T = SDRAM/ram_state_FSM_FFd2 & 
+	!SDRAM/ram_state_FSM_FFd4 & ram_dtack & !RAS_n_OBUF48
+	# !SDRAM/ram_state_FSM_FFd1 & 
+	!SDRAM/ram_state_FSM_FFd2 & SDRAM/ram_state_FSM_FFd4 & z2_state_FSM_FFd1 & 
+	!ram_dtack;
+   ram_dtack.CLK = MEMCLK;	// GCK
+   ram_dtack.AR = !RESET_n;    
+
+ram_ready.D = Vcc;
+   ram_ready.CLK = MEMCLK;	// GCK
+   ram_ready.AR = !RESET_n;
+   ram_ready.CE = SDRAM/ram_state_FSM_FFd1 & 
+	SDRAM/ram_state_FSM_FFd2 & !SDRAM/ram_state_FSM_FFd4 & 
+	!SDRAM/maddr_11_or0000/SDRAM/maddr_11_or0000_D2;    
+
+rw_sync<0>.D = RW;
+   rw_sync<0>.CLK = MEMCLK;	// GCK
+   rw_sync<0>.AP = !RESET_n;    
+
+rw_sync<1>.D = rw_sync<0>;
+   rw_sync<1>.CLK = MEMCLK;	// GCK
+   rw_sync<1>.AP = !RESET_n;    
+
+uds_n_sync<0>.D = UDS_n;
+   uds_n_sync<0>.CLK = MEMCLK;	// GCK
+   uds_n_sync<0>.AP = !RESET_n;    
+
+uds_n_sync<1>.D = uds_n_sync<0>;
+   uds_n_sync<1>.CLK = MEMCLK;	// GCK
+   uds_n_sync<1>.AP = !RESET_n;    
+
+!z2_state_FSM_FFd1.D = !z2_state_FSM_FFd1 & !z2_state_FSM_FFd2
+	# as_n_sync<1> & !z2_state_FSM_FFd2
+	# !z2_state_FSM_FFd1 & uds_n_sync<1> & 
+	lds_n_sync<1>;
+   z2_state_FSM_FFd1.CLK = MEMCLK;	// GCK
+   z2_state_FSM_FFd1.AR = !RESET_n;    
+
+z2_state_FSM_FFd2.D = !z2_state_FSM_FFd1 & z2_state_FSM_FFd2
+	# !z2_state_FSM_FFd1 & !as_n_sync<1> & 
+	$OpTx$FX_DC$188
+	# !z2_state_FSM_FFd1 & !as_n_sync<1> & 
+	ram_access/ram_access_D2
+	# !autoconf_dtack & !idereg_dtack & 
+	z2_state_FSM_FFd2 & !ram_dtack;
+   z2_state_FSM_FFd2.CLK = MEMCLK;	// GCK
+   z2_state_FSM_FFd2.AR = !RESET_n;    
+
+******************************  Device Pin Out *****************************
+
+Device : XC95144XL-10-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13              XC95144XL-10-TQ100              63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 DBUS<15>                         51 VCC                           
+  2 MA<4>                            52 DTACK_n                       
+  3 MA<5>                            53 KPR                           
+  4 MA<6>                            54 KPR                           
+  5 VCC                              55 KPR                           
+  6 MA<7>                            56 ADDR<1>                       
+  7 MA<8>                            57 VCC                           
+  8 MA<9>                            58 ADDR<3>                       
+  9 MA<11>                           59 ADDR<4>                       
+ 10 CKE                              60 ADDR<2>                       
+ 11 DQMH                             61 CFGOUT_n                      
+ 12 IDE_ROMEN                        62 GND                           
+ 13 DQML                             63 IDECS2_n                      
+ 14 MEMW_n                           64 IDECS1_n                      
+ 15 CAS_n                            65 KPR                           
+ 16 RAS_n                            66 CFGIN_n                       
+ 17 RAMCS_n                          67 IDEBUF_OE                     
+ 18 BA<0>                            68 IOW_n                         
+ 19 BA<1>                            69 GND                           
+ 20 MA<10>                           70 IOR_n                         
+ 21 GND                              71 OVR_n                         
+ 22 MA<0>                            72 KPR                           
+ 23 MA<1>                            73 ADDR<5>                       
+ 24 MA<2>                            74 ADDR<6>                       
+ 25 MA<3>                            75 GND                           
+ 26 VCC                              76 ADDR<7>                       
+ 27 MEMCLK                           77 ADDR<8>                       
+ 28 AS_n                             78 ADDR<9>                       
+ 29 UDS_n                            79 ADDR<10>                      
+ 30 LDS_n                            80 ADDR<11>                      
+ 31 GND                              81 ADDR<12>                      
+ 32 RW                               82 ADDR<13>                      
+ 33 KPR                              83 TDO                           
+ 34 ECLK                             84 GND                           
+ 35 RESET_n                          85 ADDR<14>                      
+ 36 RAM_SIZE<0>                      86 ADDR<15>                      
+ 37 RAMOE_n                          87 ADDR<16>                      
+ 38 VCC                              88 VCC                           
+ 39 RAM_SIZE<1>                      89 ADDR<17>                      
+ 40 IDE_ENABLE                       90 ADDR<18>                      
+ 41 KPR                              91 ADDR<19>                      
+ 42 BERR_n                           92 ADDR<20>                      
+ 43 KPR                              93 ADDR<21>                      
+ 44 GND                              94 ADDR<22>                      
+ 45 TDI                              95 ADDR<23>                      
+ 46 KPR                              96 DBUS<12>                      
+ 47 TMS                              97 DBUS<13>                      
+ 48 TCK                              98 VCC                           
+ 49 ROM_BANK<0>                      99 DBUS<14>                      
+ 50 ROM_BANK<1>                     100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : XC95144XL-10-TQ100
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : ON
+Slew Rate                                   : SLOW
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
