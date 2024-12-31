@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/amiga/m68k-amigaos/ndk-include"
+            ],
+            "defines": [
+                "CDBOOT=1"
+            ],
+            "compilerPath": "/opt/amiga/bin/m68k-amigaos-gcc",
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

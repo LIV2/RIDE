@@ -1,0 +1,3 @@
+MANUF_ID    = 5194
+PROD_ID_RAM = 4
+PROD_ID_IDE = 5

@@ -1,0 +1,9 @@
+{
+    "verilog.linting.linter": "verilator",
+    "verilog.formatting.verilogHDL.formatter": "verible-verilog-format",
+    "verilog.languageServer.veribleVerilogLs.enabled": true,
+    "verilog.languageServer.veribleVerilogLs.arguments": "--rules_config_search",
+    "[m68k]": {
+        "editor.rulers": []
+    }
+}
