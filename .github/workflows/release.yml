@@ -10,13 +10,42 @@ on:
   workflow_dispatch:
 
 jobs:
+  make_software:
+    runs-on: ubuntu-latest
+    container: stefanreinauer/amiga-gcc:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
+
+      - name: Build
+        run: |
+          git config --global --add safe.directory "*"
+          git fetch --prune --unshallow --tags
+          cd Software && make package
+
+      - uses: actions/upload-artifact@v4.4.0
+        with:
+          name: software
+          path: |
+            Software/artifacts/*
+          if-no-files-found: error  
+
   draft_release:
     runs-on: ubuntu-latest
+    needs:
+      - make_software
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Zip Gerbers
         run: zip -r Gerbers.zip Gerbers
+      - uses: actions/download-artifact@v4.1.7
+        with:
+          path: artifacts
       - name: release
         uses: softprops/action-gh-release@v1
         with:
@@ -27,3 +56,4 @@ jobs:
             Gerbers/*.csv
             Gerbers.zip
             Binary/*.jed
+            artifacts/software/*
