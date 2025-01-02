@@ -3,8 +3,13 @@
 ![PCB](Docs/RIDE.png?raw=True)
 
 ## Features
-- Autoboot IDE, Kick 1.3 compatible Open Source driver [lide.device](https://github.com/LIV2/lide.device)
 - 11.37MB Fast RAM - 1.5MB $C0/Ranger + 8MB Fast + 1.87 Bonus ($A00000)
+- Autoboot IDE, Kick 1.3 compatible Open Source driver [lide.device](https://github.com/LIV2/lide.device)
+- [Supports up to 2TB drives](https://github.com/LIV2/lide.device/#large-drive-4gb-support)
+- Supports ATAPI Devices (CD/DVD-ROM, Zip disk etc - no IDEFix needed)
+- Boot from ZIP/LS-120 etc
+- [Boot from CD-ROM*](https://github.com/LIV2/lide.device/#boot-from-cdrom)
+- SCSI Direct, NSD, TD64 support
 
 ## Table of contents
 1. [Compatibility](#compatibility)
