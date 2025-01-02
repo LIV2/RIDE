@@ -1,6 +1,6 @@
 # 🏍 RIDE - A500+ Fast Ram + IDE
 ## IDE + 11.37 Megabyte Fast RAM for the A500/A1000/A2000/CDTV
-![PCB](Docs/PCB3D.png?raw=True)
+![PCB](Docs/RIDE.png?raw=True)
 
 ## Features
 - Autoboot IDE, Kick 1.3 compatible Open Source driver [lide.device](https://github.com/LIV2/lide.device)
@@ -10,12 +10,13 @@
 1. [Compatibility](#compatibility)
 2. [Jumper settings](#jumper-settings)
 3. [Connections](#connections)
-4. [Programming](#programming)
-5. [Ordering PCBs](#ordering-pcbs)
+4. [Enabling A0 Bonus RAM](#enabling-a0-bonus-ram)
+5. [Programming](#programming)
+6. [Ordering PCBs](#ordering-pcbs)
     * [PCB Order details](#pcb-order-details)
     * [PCB Assembly](#pcb-assembly)
     * [Bill of Materials](#bill-of-materials)
-6. [License](#license)
+7. [License](#license)
 
 ## Compatibility
 
@@ -40,6 +41,14 @@ Connect OVR to Gary pin 29 or pin 17 of the side expansion port
 If there are no other Autoconfig devices in your system you can just leave these unconnected.  
 If there *are* other Autoconfig devices you will want to use one of these to add the device to the chain.<br /><br />
 In the Amiga 2000 you can connect CFGIN to U606 Pin 8 which will add the device to the end of the chain but **NOTE: This takes up the config signal for the leftmost slot (CN601) so do NOT install a Zorro card there**
+
+## Enabling A0 Bonus RAM
+The A0 Bonus RAM is not automatically picked up by kickstart and needs to be added using one of the included utilities.  
+Note that the `addmem` command from Aminet will **NOT** work - the memory is not enabled until a specific RIDE register is set to enable it
+
+To add the A0 Bonus RAM to the system you will need to use the `addram` command included in the RIDE-Software adf/lha found under [Releases](https://github.com/LIV2/RIDE/releases/latest).
+
+Alternatively you can add the `bootrom` module to a custom kickstart so that this is done automatically at every boot.
 
 ## Programming
 
@@ -69,7 +78,12 @@ You can use the following options:
 * Confirm Parts Placement: Yes (I recommend checking that all ICs have pin 1 in the correct location etc)
 
 ### Bill of materials
-The Bill of materials can be found under [Releases](https://github.com/LIV2/RIDE/releases/latest)
+**Note**:
+* The BOM lists a Mill-Max part for the pin sockets, however you can substitute these for some 9.7mm pin sockets like [these](https://www.aliexpress.com/item/33019740866.html?spm=a2g0o.productlist.similar_items.43.4ce068b4xz903H&utparam-url=scene%3Aimage_search%7Cquery_from%3Adetail_bigimg&pdp_npi=4%40dis%21NZD%2116.79%217.71%21%21%219.24%214.24%21%402101c67a17357902339972308e0382%2167156399241%21sea%21NZ%210%21ABX)  
+* The 39SF010 flash can be substituted with 39SF020 or 39SF040 in TSOP-32
+
+[BOM](https://html-preview.github.io/?url=https://github.com/LIV2/RIDE/blob/master/Docs/RIDE_bom.html)  
+[HTML Interactive BOM](https://html-preview.github.io/?url=https://github.com/LIV2/RIDE/blob/master/Docs/RIDE-ibom.html)
 
 ## Acknowledgements
 Thanks to [SukkoPera](https://github.com/SukkoPera) for supporting my early IDE prototype.
