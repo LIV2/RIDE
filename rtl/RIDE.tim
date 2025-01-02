@@ -5,7 +5,7 @@ Design:     RIDE
 Device:     XC95144XL-10-TQ100
 Speed File: Version 3.0
 Program:    Timing Report Generator:  version P.20131013
-Date:       Thu Jan  2 04:37:05 2025
+Date:       Thu Jan  2 18:24:13 2025
 
 Performance Summary:
 
@@ -200,18 +200,18 @@ ADDR<16>     21.9
 ADDR<17>     29.6      
 ADDR<18>     29.6      
 ADDR<19>     37.3      
-ADDR<1>      14.2      
+ADDR<1>      15.2      
 ADDR<20>     31.6      
 ADDR<21>     29.6      
 ADDR<22>     29.6      
 ADDR<23>     29.6      
 ADDR<2>       7.5      
-ADDR<3>      14.2      
+ADDR<3>      15.2      
 ADDR<4>      14.2      
 ADDR<5>      14.2      
-ADDR<6>      14.2      
-ADDR<7>      14.2      
-ADDR<8>      14.2      
+ADDR<6>      15.2      
+ADDR<7>      15.2      
+ADDR<8>      15.2      
 ADDR<9>       6.5      
 AS_n          6.5      
 DBUS<12>      6.5      
@@ -435,7 +435,7 @@ BA<1>.D
 CAS_n.D                                                                     
 CKE.CE                                                                      
 CKE.D                                                                       
-DQMH.D                                                      10.0            
+DQMH.D                                                      11.0            
 DQML.D                                                            10.0      
 IDE/ds_delay<0>.D                                                       10.0
 IDE/ds_delay<1>.D                                                       10.0
@@ -786,8 +786,8 @@ BA<1>.D
 CAS_n.D                                         25.4  25.4  25.4  25.4      
 CKE.CE                                          10.0  10.0        10.0      
 CKE.D                                                                       
-DQMH.D                                          40.8  40.8  40.8  40.8      
-DQML.D                                          40.8  40.8  40.8  40.8      
+DQMH.D                                          34.1  34.1  34.1  34.1      
+DQML.D                                          33.1  33.1  33.1  33.1      
 IDE/ds_delay<0>.D                                                           
 IDE/ds_delay<1>.D                                                           
 IDE/ds_delay<2>.D                                                           
@@ -796,17 +796,17 @@ IDE/rom_bankSel<1>.D
 IOR_n.D                                                                     
 IOW_n.CE                                                                    
 IOW_n.D                                                                     
-MA<0>.D                                         40.8  40.8  40.8  40.8      
+MA<0>.D                                         33.1  33.1  33.1  33.1      
 MA<10>.D                                        40.8  40.8  40.8  40.8      
 MA<11>.D                                        17.7  17.7  17.7  17.7      
-MA<1>.D                                         40.8  40.8  40.8  40.8      
-MA<2>.D                                         40.8  40.8  40.8  40.8      
-MA<3>.D                                         40.8  40.8  40.8  40.8      
-MA<4>.D                                         40.8  40.8  40.8  40.8      
-MA<5>.D                                         40.8  40.8  40.8  40.8      
-MA<6>.D                                         40.8  40.8  40.8  40.8      
-MA<7>.D                                         40.8  40.8  40.8  40.8      
-MA<8>.D                                         40.8  40.8  40.8  40.8      
+MA<1>.D                                         33.1  33.1  33.1  33.1      
+MA<2>.D                                         33.1  33.1  33.1  33.1      
+MA<3>.D                                         33.1  33.1  33.1  33.1      
+MA<4>.D                                         33.1  33.1  33.1  33.1      
+MA<5>.D                                         33.1  33.1  33.1  33.1      
+MA<6>.D                                         33.1  33.1  33.1  33.1      
+MA<7>.D                                         33.1  33.1  33.1  33.1      
+MA<8>.D                                         33.1  33.1  33.1  33.1      
 MA<9>.D                       10.0              17.7  17.7  17.7  17.7      
 MEMW_n.D                                        40.8  40.8  40.8  40.8      
 RAMCS_n.D                           10.0        25.4  25.4  25.4  25.4      
@@ -840,7 +840,7 @@ ideregister_dout<3>.D
 lds_n_sync<1>.D                                                             
 otherram_en.D                                                               
 ovl.CE                                                                      
-ram_dtack.D                                     10.0  10.0  10.0  10.0      
+ram_dtack.D                                     33.1  33.1  33.1  33.1      
 ram_ready.CE                                    17.7  17.7  17.7  17.7      
 rw_sync<1>.D                                                                
 uds_n_sync<1>.D                                                             
@@ -1059,11 +1059,11 @@ autoconf_dtack.D
 autoconfig_dout<0>.CE                                                       
 autoconfig_dout<0>.D                                                        
 autoconfig_dout<1>.CE                                                       
-autoconfig_dout<1>.D          10.0                                          
+autoconfig_dout<1>.D          11.0                                          
 autoconfig_dout<2>.CE                                                       
 autoconfig_dout<2>.D                11.0                                    
 autoconfig_dout<3>.CE                                                       
-autoconfig_dout<3>.D                      11.0                              
+autoconfig_dout<3>.D                      10.0                              
 enable_maprom.D                                 10.0  17.7  17.7            
 ide_enabled.D                                         10.0                  
 idereg_dtack.D                                        10.0  10.0            

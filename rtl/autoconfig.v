@@ -67,8 +67,8 @@ localparam SZ_0M = 2'b00,
 
 wire [7:0] prodid [0:1];
 
-assign prodid[ac_ram] = 8'd4;
-assign prodid[ac_ide] = 8'h5;
+assign prodid[ac_ram] = 8'd8;
+assign prodid[ac_ide] = 8'h9;
 
 wire [3:0] boardSize [0:1];
 assign boardSize[ac_ram] = {1'b1,zram_size};
