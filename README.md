@@ -52,9 +52,15 @@ Alternatively you can add the `bootrom` module to a custom kickstart so that thi
 
 ## Programming
 
-Program the CPLD using this [jed file](https://github.com/LIV2/RIDE/raw/master/Binary/RIDE.jed) - You can find instructions on how to do that [here](https://linuxjedi.co.uk/2020/12/01/programming-xilinx-jtag-from-a-raspberry-pi/)
+Program the CPLD using the relevant .jed file below (Right-click, Save as)
+|Model|File|
+|-----|----|
+|A500(+)<br />A1000<br />A2000|[RIDE.jed](https://github.com/LIV2/RIDE/raw/master/Binary/RIDE.jed)|
+|CDTV|[RIDE-CDTV.jed](https://github.com/LIV2/RIDE/raw/master/Binary/RIDE-CDTV.jed)|
 
-IDE ROM can be programmed by booting from the latest lide-update.adf [here](https://github.com/LIV2/LIDE.device/releases/latest).
+You can find instructions on how to do that [here](https://linuxjedi.co.uk/2020/12/01/programming-xilinx-jtag-from-a-raspberry-pi/)
+
+The IDE ROM can be programmed by booting from the latest lide-update.adf [here](https://github.com/LIV2/LIDE.device/releases/latest).
 
 
 ## Ordering PCBs

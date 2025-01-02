@@ -47,7 +47,6 @@ reg ram_configured;
 reg ide_configured;
 
 reg [2:0] ide_base;
-reg cdtv;
 reg cdtv_configured;
 reg cfgin;
 reg cfgout;
@@ -83,14 +82,10 @@ assign cfgout_n = ~cfgout;
 // So we wait until it's configured before we talk
 always @(posedge clk or negedge reset_n) begin
   if (!reset_n) begin
-    cdtv <= 0;
     cdtv_configured <= 0;
   end else begin
     if (addr[23:16] == 8'hE8 && addr[8:1] == 8'h24 && !as_n && !rw) begin
       cdtv_configured <= 1'b1;
-    end
-    if (addr[23:16] == 8'hE1 && !as_n && rw) begin // Read from CDTV NVRAM (won't work if CDTV switched to A500 mode...)
-      cdtv <= 1;
     end
   end
 end
@@ -104,7 +99,7 @@ always @(posedge as_n or negedge reset_n) begin
 `ifdef CDTV
     cfgin  <= ~cfgin_n && cdtv_configured;
 `else
-    cfgin  <= ~cfgin_n && (!cdtv || cdtv_configured);
+    cfgin  <= ~cfgin_n;
 `endif
     cfgout <= (ac_state == ac_done);
   end
