@@ -8748,6 +8748,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC #" "C21714343"
+			(at 266.7 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8f268d7d-d3a9-425a-baca-e6590c1eb87a")
 		)
@@ -9174,6 +9183,15 @@
 			)
 		)
 		(property "Mouser #" "737-BHR-40-VUA"
+			(at 231.14 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC #" "C9138"
 			(at 231.14 76.2 0)
 			(effects
 				(font

@@ -27,6 +27,8 @@ Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
 "C26","47uF","CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder",46.8713,35.6108,180.0000,bottom
 "D1","LED","LED_0603_1608Metric",2.7940,29.0830,0.0000,top
 "F1","Polyfuse 500mA Hold","Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder",52.7812,35.5346,180.0000,bottom
+"J1","IDE","IDC-Header_2x20_P2.54mm_Vertical",28.4956,30.7435,0.0000,top
+"J4","Conn_02x03_Odd_Even","PinHeader_2x03_P2.54mm_Vertical",11.1556,30.0632,270.0000,top
 "R1","10k","R_0603_1608Metric",2.7940,35.1432,0.0000,top
 "R2","10k","R_0603_1608Metric",2.7940,33.6550,0.0000,top
 "R3","10k","R_0603_1608Metric",2.7940,32.1310,0.0000,top

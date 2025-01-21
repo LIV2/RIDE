@@ -10840,7 +10840,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "3659dba0-ce7c-4d1a-b84b-0aa2feeab77f")
@@ -11740,7 +11740,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC #" "C46327"
+		(property "LCSC #" "C5203552"
 			(at 107.95 140.97 0)
 			(effects
 				(font
@@ -12906,6 +12906,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC #" "C7501274"
+			(at 270.51 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "12acffc2-d420-4fe4-a805-fbd61e24a93d")
 		)
@@ -13003,7 +13012,7 @@
 		(at 267.97 105.41 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
