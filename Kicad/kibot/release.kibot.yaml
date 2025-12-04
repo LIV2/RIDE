@@ -213,6 +213,8 @@ outputs:
         - Footprint
         - field: 'Mouser #'
           name: 'Mouser Part'
+        - field: 'Digikey #'
+          name: 'Digikey Part'
         - field: 'LCSC #'
           name: 'LCSC Part'
       html:
@@ -222,3 +224,4 @@ outputs:
         quote_all: true
         lcsc_link: "LCSC #"
         mouser_link: "Mouser #"
+        digikey_link: "Digikey #"
