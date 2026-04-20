@@ -29,9 +29,9 @@ module Autoconfig (
     input cfgin_n,
     input enable_maprom,
     output cfgout_n,
-    output ram_access,
-    output ide_access,
-    output autoconfig_cycle,
+    output reg ram_access,
+    output reg ide_access,
+    output reg autoconfig_cycle,
     output reg [3:0] dout,
     output reg dtack,
     output reg ovl
@@ -73,8 +73,6 @@ assign prodid[ac_ide] = 8'h9;
 wire [3:0] boardSize [0:1];
 assign boardSize[ac_ram] = {1'b1,zram_size};
 assign boardSize[ac_ide] = 4'b0010; // 128K
-
-assign autoconfig_cycle = (addr[23:16] == 8'hE8) && cfgin && !cfgout;
 
 assign cfgout_n = ~cfgout;
 
@@ -206,22 +204,11 @@ begin
   end
 end
 
-always @(posedge clk or negedge reset_n) begin
-  if (!reset_n) begin
-    ovl <= 1;
-    maprom_enabled <= enable_maprom && ovr_detect;
-  end else begin
-    if (addr[23:16] == 8'hBF && !as_n && !rw)
-      ovl <= 0;
-  end
-end
 
 wire   fastram_access  = (addr[23:21] == 3'b001 && addr_match[0]) || // $200000-3FFFFF
                          (addr[23:21] == 3'b010 && addr_match[1]) || // $400000-5FFFFF
                          (addr[23:21] == 3'b011 && addr_match[2]) || // $600000-7FFFFF
                          (addr[23:21] == 3'b100 && addr_match[3]);   // $800000-9FFFFF
-
-assign ide_access      = (addr[23:17] == {4'hE, ide_base} && ide_configured);
 
 wire bonus_access    = (addr[23:16] >= 8'hA0) && (addr[23:16] <= 8'hBD); // A00000-BDFFFF Bonus RAM
 
@@ -234,9 +221,25 @@ wire bootrom_access = (addr[23:19] == 5'b00000 && ovl && maprom_enabled && rw);
 wire kickrom_access = (addr[23:20] == 4'b1111 && (maprom_enabled == rw));
 
 
-assign ram_access      = fastram_access && ram_configured ||
-                         bootrom_access ||
-                         kickrom_access ||
-                         otherram_access ||
-                         ranger_access;
+always @(posedge clk or negedge reset_n) begin
+  if (!reset_n) begin
+    ovl <= 1;
+    maprom_enabled <= enable_maprom && ovr_detect;
+    ide_access <= 0;
+    ram_access <= 0;
+    autoconfig_cycle <= 0;
+  end else begin
+    if (addr[23:16] == 8'hBF && !as_n && !rw)
+      ovl <= 0;
+
+    autoconfig_cycle <= (addr[23:16] == 8'hE8) && cfgin && !cfgout;
+    ide_access       <= (addr[23:17] == {4'hE, ide_base} && ide_configured);
+    ram_access <= fastram_access && ram_configured ||
+                  bootrom_access ||
+                  kickrom_access ||
+                  otherram_access ||
+                  ranger_access;
+  end
+end
+
 endmodule

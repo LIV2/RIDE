@@ -35,17 +35,20 @@ module IDE(
     output reg iow_n,
     output [1:0] rom_bank,
     output ide_romen,
-    output reg otherram_en,
-    output reg enable_maprom,
+    output otherram_en,
+    output enable_maprom,
     output idereg_access,
     output reg dtack
     );
 
 `include "globalparams.vh"
 
-reg [1:0] rom_bankSel;
+reg [3:0] control_reg;
 
-assign rom_bank = (ide_enabled) ? rom_bankSel : {1'b0,addr[16]};
+assign otherram_en = control_reg[1];
+assign enable_maprom = control_reg[0];
+
+assign rom_bank = (ide_enabled) ? control_reg[3:2] : {1'b0,addr[16]};
 
 assign idecs1_n = !(ide_access && addr[13:12] == 2'b01 && addr[16:15] == 2'b00) || !ide_enabled;
 assign idecs2_n = !(ide_access && addr[13:12] == 2'b10 && addr[16:15] == 2'b00) || !ide_enabled;
@@ -85,8 +88,7 @@ end
 always @(posedge clk or negedge reset_n) begin
   if (!reset_n) begin
     ide_enabled <= 0;
-    rom_bankSel <= 0;
-    otherram_en <= 0;
+    control_reg[3:1] <= 0;
     dtack       <= 0;
   end else begin
     if (ide_enable && !rw && ide_access) ide_enabled <= 1;
@@ -96,11 +98,9 @@ always @(posedge clk or negedge reset_n) begin
 
       if (idereg_access) begin
         if (rw) begin
-          dout[3:0] <= {rom_bankSel[1:0],otherram_en,enable_maprom};
+          dout <= control_reg;
         end else begin
-          rom_bankSel   <= din[3:2];
-          otherram_en   <= din[1];
-          enable_maprom <= din[0];
+          control_reg <= din[3:0];
         end
       end
     end else begin
